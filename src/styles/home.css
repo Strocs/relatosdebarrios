@@ -1,0 +1,139 @@
+@import "@styles/main.css";
+
+.under_construction {
+  display: flex;
+  flex-direction: column;
+  margin: 3rem 0;
+  align-items: center;
+  justify-content: space-between;
+  cursor: default;
+}
+
+.logo { 
+  width: 15rem;
+}
+
+.gente {
+  position: relative;
+  width: 33rem;
+  height: 30rem;
+}
+
+.caro {
+  position: absolute;
+  height: 20rem;
+  right: 4rem;
+  top: 0;
+}
+
+.vincent {
+  position: absolute;
+  height: 15rem;
+  left: 10rem;
+  top: 9rem;
+}
+
+.p1 {
+  position: absolute;
+  height: 12.5rem;
+  right: 0;
+  bottom: 0;
+}
+
+.p2 {
+  position: absolute;
+  height: 11rem;
+  left: 0;
+  bottom: 0;
+} 
+
+.text {
+  margin-left: 5rem;
+  font-size: 2rem;
+  font-weight: 200;
+  letter-spacing: 3px;
+  line-height: .9;
+}
+
+.rrss {
+  display: flex;
+  align-items: baseline;
+}
+
+.rrss > a > img {
+  height: 2rem;
+  margin: 0 .2rem;
+}
+
+.rrss > p {
+  margin: 0 .2rem;
+  font-size: 1.7rem;
+  letter-spacing: -.3px;
+  font-weight: 400;
+}
+
+/*  
+    ------------- 
+    MEDIA QUERIES
+    ------------- 
+*/
+
+/*  ------- TABLETS ------- */
+
+@media screen and (min-width: 600px) {
+  
+  .logo { 
+    width: 25rem;
+  }
+  
+  .gente {
+    margin-top: -5rem;
+    width: 70rem;
+    height: 60rem;
+  }
+  
+  .caro {
+    height: 40rem;
+    right: 8rem;
+  
+  }
+  .vincent {
+    height: 30rem;
+    left: 25rem;
+    top: 18rem;
+  }
+  
+  .p1 {
+    height: 25rem;
+  }
+  
+  .p2 {
+    height: 24rem;
+  } 
+
+  .text {
+    width: 21rem;
+    margin-left: 12rem;
+    margin-top: 8rem;
+    font-size: 4rem;
+  }
+
+  .caro:hover,
+  .vincent:hover,
+  .p1:hover, 
+  .p2:hover {
+    scale: 1.2;
+    z-index: 2;
+  }
+
+  .text:hover {
+    font-size: 5rem;
+  }
+
+}
+
+/*  ------- DESKTOP ------- */
+
+@media screen and (min-width: 1366px) {
+
+}
