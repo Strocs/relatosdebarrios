@@ -6,14 +6,14 @@ body {
 
 .header {
   position: fixed;
-  width: 1920px;
+  width: 768px;
   visibility: hidden;
 }
 
 .website {
   margin: 0;
   padding: 0;
-  width: 1920px;
+  width: 768px;
 }
 
 /*  
@@ -24,12 +24,34 @@ body {
 
 /*  ------- TABLETS ------- */
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 770px) {
+
+
+  .header {
+    position: fixed;
+    width: 1366px;
+    visibility: hidden;
+  }
   
+  .website {
+    margin: 0;
+    padding: 0;
+    width: 1366px;
+  }
 }
 
 /*  ------- DESKTOP ------- */
 
-@media screen and (min-width: 1366px) {
-
+@media screen and (min-width: 1370px) {
+  .header {
+    position: fixed;
+    width: 1920px;
+    visibility: hidden;
+  }
+  
+  .website {
+    margin: 0;
+    padding: 0;
+    width: 1920px;
+  }
 }
