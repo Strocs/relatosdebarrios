@@ -103,15 +103,15 @@ module.exports = {
         //     ]
         // }),
 
-        new FaviconsWebpackPlugin({
-            logo: 'src/assets/images/relatos_favicon.svg',
-            mode: 'light',
-            devMode: 'light',
-            cache: true,
-            outputPath: './assets/images',
-            prefix: 'assets/images/',
-            inject: true,
-          }),
+        // new FaviconsWebpackPlugin({
+        //     logo: 'src/assets/images/relatos_favicon.svg',
+        //     mode: 'light',
+        //     devMode: 'light',
+        //     cache: true,
+        //     outputPath: './assets/images',
+        //     prefix: 'assets/images/',
+        //     inject: true,
+        //   }),
     ],
     devServer: {
         contentBase: path.join(__dirname, 'dist'),

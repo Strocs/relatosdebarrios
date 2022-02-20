@@ -106,14 +106,14 @@ module.exports = {
 
 
         new CleanWebpackPlugin(),
-        new FaviconsWebpackPlugin({
-            logo: 'src/assets/images/relatos_favicon.svg',
-            mode: 'light',
-            cache: true,
-            outputPath: './assets/images',
-            prefix: 'assets/images/',
-            inject: true,
-          }),
+        // new FaviconsWebpackPlugin({
+        //     logo: 'src/assets/images/relatos_favicon.svg',
+        //     mode: 'light',
+        //     cache: true,
+        //     outputPath: './assets/images',
+        //     prefix: 'assets/images/',
+        //     inject: true,
+        //   }),
     ],
     
     optimization: {
