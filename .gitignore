@@ -105,6 +105,6 @@ dist
 .tern-port
 
 # testing folder
-Test/
 public/recorrido-exterior
 public/recorrido-interior
+0_RelatosGraphic/
