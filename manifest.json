@@ -1,7 +1,7 @@
 {
-  "name": "web-relatos",
-  "short_name": "web-relatos",
-  "description": "Web Relatos de Barrios con JS Vanilla y NPM",
+  "name": "web-frijol-magico",
+  "short_name": "web-frijol-magico",
+  "description": "Desarrollo de la Web de Frijol Mágico con JS Vanilla y NPM",
   "dir": "auto",
   "lang": "en-US",
   "display": "standalone",

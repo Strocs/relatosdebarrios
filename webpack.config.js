@@ -2,9 +2,8 @@ const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
-const CsssMinimizerPlugin = require('css-minimizer-webpack-plugin')
-const TerserPlugin = require('terser-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const TerserPlugin = require('terser-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 
 module.exports = {
@@ -13,7 +12,7 @@ module.exports = {
     },
 
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         filename: '[name].[contenthash].js',
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
@@ -25,7 +24,6 @@ module.exports = {
             '@styles': path.resolve(__dirname, 'src/styles/'),
             '@images': path.resolve(__dirname, 'src/assets/images/'),
             '@components': path.resolve(__dirname, 'src/components/'),
-            '@templates': path.resolve(__dirname, 'src/templates/'),
         }
     },
 
@@ -66,6 +64,7 @@ module.exports = {
               },
             },
         },
+        
         {
             test: /\.(woff|woff2)$/,
             use: {
@@ -95,33 +94,42 @@ module.exports = {
             filename: '[name].[contenthash].css'
         }),
 
-        // new CopyPlugin({
-        //     patterns: [
-        //     {
-        //         from: path.resolve(__dirname, "src", "utils"),
-        //         to: "utils"
-        //     }
-        //     ]
-        // }),
+        new CopyPlugin({
+            patterns: [
+            {
+                from: path.resolve(__dirname, "src", "utils"),
+                to: "utils"
+            }
+            ]
+        }),
 
-
-        new CleanWebpackPlugin(),
+        new CopyPlugin({
+            patterns: [
+            {
+                from: path.resolve(__dirname, "src", "assets", "images", "gallery"),
+                to: "assets/gallery"
+            }
+            ]
+        }),
+        
         new FaviconsWebpackPlugin({
-            logo: 'src/assets/images/relatos_favicon.svg',
+            logo: 'src/assets/images/LogoFrijol.png',
             mode: 'light',
             cache: true,
             outputPath: './assets/images',
             prefix: 'assets/images/',
             inject: true,
           }),
+          
+        new CleanWebpackPlugin(),
+
     ],
     
     optimization: {
         minimize: true,
         minimizer: [
-            new CsssMinimizerPlugin(),
+            // new CsssMinimizerPlugin(),
             new TerserPlugin(),
         ]
     }
-
 }

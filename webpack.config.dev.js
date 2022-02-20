@@ -10,7 +10,7 @@ module.exports = {
     } ,
     
     output: {
-        path: path.resolve(__dirname, 'dist'),
+        path: path.resolve(__dirname, 'docs'),
         filename: '[name].[contenthash].js',
         assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
@@ -24,11 +24,11 @@ module.exports = {
             '@styles': path.resolve(__dirname, 'src/styles/'),
             '@images': path.resolve(__dirname, 'src/assets/images/'),
             '@components': path.resolve(__dirname, 'src/components/'),
-            '@templates': path.resolve(__dirname, 'src/templates/'),
         }
     },
 
     module: {
+
         rules: [
         {
             test: /\.m?js$/,
@@ -64,8 +64,9 @@ module.exports = {
               },
             },
         },
+
         {
-            test: /\.(woff|woff2)$/,
+            test: /\.(woff|woff2|ttf)$/,
             use: {
                 loader: 'url-loader',
                 options: {
@@ -89,7 +90,6 @@ module.exports = {
             chunks: ['home'],
         }),
 
-
         new MiniCssExtractPlugin({
             filename: '[name].[contenthash].css'
         }),
@@ -103,20 +103,23 @@ module.exports = {
         //     ]
         // }),
 
+
         new FaviconsWebpackPlugin({
-            logo: 'src/assets/images/relatos_favicon.svg',
+            logo: 'src/assets/favicon.svg',
             mode: 'light',
             devMode: 'light',
             cache: true,
-            outputPath: './assets/images',
-            prefix: 'assets/images/',
+            outputPath: './assets',
+            prefix: 'assets/',
             inject: true,
           }),
+
     ],
+
     devServer: {
-        contentBase: path.join(__dirname, 'dist'),
+        contentBase: path.join(__dirname, 'docs'),
         compress: true,
         historyApiFallback: true,
-        port: 3000,
+        port: 8080,
     },
 }

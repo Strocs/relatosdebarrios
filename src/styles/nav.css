@@ -1,0 +1,43 @@
+.nav {
+    /* position: fixed; */
+    background: var(--azul);
+    width: 100%;
+}
+
+.nav__container {
+    height: 140px;
+    margin: 0 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.nav__logo img {
+    height: 65px;
+}
+
+
+.nav__menu {
+    display: flex;
+    list-style: none;
+    padding-top: 10px;
+}
+
+.nav__menu-section {
+    font-family: Raleway;
+    font-size: 1.8rem;
+    margin: 0 24px;
+    text-transform: uppercase;
+}
+
+.nav__menu-section:last-child {
+    margin: 0 0 0 24px;
+}
+
+.nav__menu-section a {
+    color: var(--pastel);
+    text-decoration: none;
+
+}
+

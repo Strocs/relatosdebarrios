@@ -6,10 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack --mode production --config webpack.config.js",
-    "build:watch": "webpack --mode production --watch --config webpack.config.js",
-    "build:start": "webpack serve --mode production --config webpack.config.js",
     "dev": "webpack --config webpack.config.dev.js",
-    "start": "webpack serve --config webpack.config.dev.js"
+    "start": "webpack serve --config webpack.config.dev.js --open"
   },
   "repository": {
     "type": "git",
@@ -35,7 +33,6 @@
     "copy-webpack-plugin": "^8.1.0",
     "css-loader": "^5.2.0",
     "css-minimizer-webpack-plugin": "^2.0.0",
-    "favicons": "^6.2.2",
     "favicons-webpack-plugin": "^5.0.2",
     "file-loader": "^6.2.0",
     "html-loader": "^2.1.2",
@@ -49,6 +46,8 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
-    "animate.css": "^4.1.1"
+    "@glidejs/glide": "^3.5.2",
+    "animate.css": "^4.1.1",
+    "underscore": "^1.13.1"
   }
 }
