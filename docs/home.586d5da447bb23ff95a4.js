@@ -1,0 +1,1 @@
+(()=>{"use strict";window.onscroll=function(){let e=window.scrollY,i=document.getElementsByClassName("header")[0];i.style.visibility=e>0?"visible":"hidden"}})();
