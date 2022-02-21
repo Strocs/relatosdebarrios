@@ -1,6 +1,6 @@
 .nav {
-    /* position: fixed; */
-    background: var(--azul);
+    position: absolute;
+    /* background: var(--azul); */
     width: 100%;
 }
 
