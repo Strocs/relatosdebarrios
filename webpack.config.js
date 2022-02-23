@@ -1,6 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 const CopyPlugin = require('copy-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
@@ -66,7 +66,7 @@ module.exports = {
         },
         
         {
-            test: /\.(woff|woff2)$/,
+            test: /\.(woff|woff2|ttf)$/,
             use: {
                 loader: 'url-loader',
                 options: {
@@ -97,27 +97,19 @@ module.exports = {
         new CopyPlugin({
             patterns: [
             {
-                from: path.resolve(__dirname, "src", "utils"),
-                to: "utils"
-            }
-            ]
-        }),
-
-        new CopyPlugin({
-            patterns: [
-            {
-                from: path.resolve(__dirname, "src", "assets", "images", "gallery"),
-                to: "assets/gallery"
+                from: path.resolve(__dirname, "src", "assets", "videos"),
+                to: "assets"
             }
             ]
         }),
         
         new FaviconsWebpackPlugin({
-            logo: 'src/assets/images/LogoFrijol.png',
+            logo: 'src/assets/favicon.svg',
             mode: 'light',
+            devMode: 'light',
             cache: true,
-            outputPath: './assets/images',
-            prefix: 'assets/images/',
+            outputPath: './assets',
+            prefix: 'assets/',
             inject: true,
           }),
           
@@ -128,7 +120,7 @@ module.exports = {
     optimization: {
         minimize: true,
         minimizer: [
-            // new CsssMinimizerPlugin(),
+            new MiniCssExtractPlugin(),
             new TerserPlugin(),
         ]
     }

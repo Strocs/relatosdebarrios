@@ -1,8 +1,8 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
 const FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 
 module.exports = {
     entry: {
@@ -94,14 +94,14 @@ module.exports = {
             filename: '[name].[contenthash].css'
         }),
 
-        // new CopyPlugin({
-        //     patterns: [
-        //     {
-        //         from: path.resolve(__dirname, "src", "utils"),
-        //         to: "utils"
-        //     }
-        //     ]
-        // }),
+        new CopyPlugin({
+            patterns: [
+            {
+                from: path.resolve(__dirname, "src", "assets", "videos"),
+                to: "assets"
+            }
+            ]
+        }),
 
 
         new FaviconsWebpackPlugin({

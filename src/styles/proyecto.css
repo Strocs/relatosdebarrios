@@ -1,0 +1,91 @@
+/* ---EL PROYECTO--- */
+
+.main__proyecto {
+    height: 1400px;
+
+}
+.main__proyecto-wrapper {
+    margin: 0 250px;
+    display: flex;
+    padding-top: 150px;
+    justify-content: space-between;
+}
+
+
+/* ---EQUIPO--- */
+
+.main__proyecto-equipo {
+    display: flex;
+    height: 600px;
+    width: 560px;
+
+}
+
+.equipo__wrapper,
+.colab__wrapper {
+    flex-grow: 1;
+    transition: flex-grow 500ms ease;
+}
+
+.equipo__wrapper {
+    background-color: var(--azul);
+}
+
+.colab__wrapper {
+    background-color: var(--amarillo);
+}
+
+
+
+
+/* HOVER */
+
+
+.equipo__wrapper:hover,
+.colab__wrapper:hover {
+    flex-grow: 4;
+    transition: flex-grow 500ms ease-in;
+}
+
+
+/* ---DESCRIPCION--- */
+
+.main__proyecto-description {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    justify-content: space-between;
+    height: 600px;
+}
+
+.proyecto__title {
+    margin: 0;
+    padding: 0;
+    color: #AEAEAE;    
+    text-transform: uppercase;
+    font-size: 10rem;
+    font-weight: 900;
+}
+
+.proyecto__content {
+    text-align: right;
+
+}
+
+.proyecto__subTitle {
+    font-size: 6rem;
+    color: var(--azul);
+    margin-bottom: 20px;
+}
+
+.proyecto__text {
+    display: inline-block;
+    font-size: 2.1rem;
+    color: var(--azul);
+    font-weight: 500;
+    margin: 0;
+    width: 520px;
+    text-align: justify;
+}
+
+

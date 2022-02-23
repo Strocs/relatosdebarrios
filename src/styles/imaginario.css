@@ -1,0 +1,118 @@
+.main__imaginario {
+    background-color: var(--pastel);
+    height: 1400px;
+}
+
+.imaginario__imgTransition img {
+    margin-top: -300px;
+    width: 100%;
+}
+
+.main__imaginario-wrapper {
+    margin: 0 250px;
+}
+
+.imaginario__title {
+    color: var(--azul);
+    text-transform: uppercase;
+    font-size: 10rem;
+    font-weight: 900;
+    line-height: .9;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.imaginario__title span {
+    color: var(--amarillo);
+}
+
+.imaginario__subBar {
+    width: 60vw;
+    height: 10px;
+    background-color: var(--amarillo);
+    margin-left: 500px;
+    margin-top: 20px;
+}
+
+
+.imaginario__content {
+    margin-bottom: 500px;
+}
+
+.imaginario__fotos {
+    display: flex;
+    height: 290px;
+    justify-content: space-between;
+    margin-top: 80px;
+}
+
+.imaginario__box {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 430px;
+    background-color: var(--azul);
+    transition: transform 300ms ease;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.imaginario__boxTitle {
+    color: var(--pastel);
+    font-weight: 800;
+    font-size: 4rem;   
+    text-transform: uppercase;
+    margin: 20px;
+    line-height: 1;
+    position: absolute;
+    z-index: 2;
+}
+
+.imaginario__boxTitle span {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.imaginario__3d {
+    display: flex;
+    height: 290px;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.imaginario__box3d {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    width: 670px;
+    background-color: var(--azul);
+    transition: transform 500ms ease;
+    cursor: pointer;
+}
+
+.imaginario__box:hover,
+.imaginario__box3d:hover {
+    transform: scale(1.1);
+    transition: transform 500ms ease;
+}
+
+.imaginario__box:hover > .imaginario__fondo-archivo {
+    transform: scale(1.4);
+    transition: transform 2s ease;
+}
+
+
+.imaginario__fondo-archivo {
+    width: 430px;
+    position: absolute;
+    z-index: 1;
+    top: 0; 
+    bottom: 0; 
+    margin-top: auto; 
+    margin-bottom: auto; 
+    transition: transform 1s ease;
+}
+
+

@@ -1,0 +1,118 @@
+.main__descubre {
+    /* background-image: url(../assets/muralla.jpg); */
+    /* background-size:cover; */
+
+    /* height: 1000px; */
+}
+
+.main__descubre-wrapper {
+    margin: 0 250px;
+    padding-top: 130px;
+}
+
+.descubre__title-wrapper {
+}
+
+.descubre__title {
+    color: var(--pastel);
+    text-transform: uppercase;
+    font-size: 10rem;
+    font-weight: 900;
+    line-height: .9;
+    margin: 0;
+    padding: 0;
+}
+
+.descubre__title span {
+    color: var(--amarillo);
+}
+
+.descubre__subBar {
+    width: 60vw;
+    height: 10px;
+    background-color: var(--amarillo);
+    margin-left: -250px;
+    /* margin-top: 20px; */
+}
+
+.descubre__content {
+    display: flex;
+    margin: 90px 200px 0;
+    justify-content: space-between;
+}
+
+.descubre__libro-wrapper,
+.descubre__docu-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.libro__img-link,
+.docu__img-link {
+    transition: transform 500ms ease;
+    width: 400px;
+    position: relative;
+    
+}
+
+.libro__img,
+.docu__img {
+    width: 400px;   
+    position: absolute;
+}
+
+.video_docu {
+    width: 300px;
+    overflow: hidden;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+}
+
+.video__docu-gif {
+    height: 270px;
+    margin-top: 30px;
+    margin-left: -120px;
+}
+
+
+.libro__text-link,
+.docu__text-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+    text-decoration: none;
+    transition: opacity 500ms ease;
+    opacity: 0;
+}
+
+.libro__text-link img,
+.docu__text-link img {
+    width: 50px;
+}
+
+.libro__text-link h3,
+.docu__text-link h3 {
+    color: white;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.libro__img-link:hover,
+.docu__img-link:hover {
+    /* transform: scale(1.1); */
+    transition: transform 500ms ease;  
+}
+
+.libro__img-link:hover + .libro__text-link ,
+.docu__img-link:hover + .docu__text-link {
+    opacity: 1;
+    transition: opacity 500ms ease;
+}
+
+

@@ -61,7 +61,9 @@
 
 :root {
   --azul: #344754;
-  --pastel: #E9DED3;
+  --pastel: #EEE3D8;
+  --amarillo: #FAC074;
+  --gris: #D1CDC5;
 
 }
 
@@ -105,12 +107,14 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
+  font-family: Raleway;
+  background-color: var(--azul);
 }
 
 
