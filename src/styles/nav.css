@@ -1,41 +1,73 @@
 .nav {
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-    transition: background-color 300ms ease;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+	transition: background 300ms ease;
 }
 
 .nav__container {
-    height: 140px;
-    margin: 0 250px;
+    height: 6.5rem;
+	transition: height 300ms ease;
+}
+
+.nav__container-mobile {
+    margin: 2rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: height 300ms ease;
 }
-
 
 .nav__logo-img {
-    height: 65px;
-    transition: height 300ms ease;
+	height: 4rem;
+	transition: height 300ms ease;
 }
 
+/* TOGGLE BUTTON */
+.nav__toggle-btn {
+	cursor: pointer;
+	padding: 1.5rem 0.5rem;
+}
+
+.nav__toggle-btn span,
+.nav__toggle-btn span::before,
+.nav__toggle-btn span::after {
+	display: block;
+	background: var(--pastel);
+	height: .2rem;
+	width: 3rem;
+	border-radius: .2rem;
+	position: relative;
+}
+
+.nav__toggle-btn span::after,
+.nav__toggle-btn span::before {
+	content: '';
+	position: absolute;
+}
+
+.nav__toggle-btn span::after {
+	top: .7rem;
+}
+
+.nav__toggle-btn span::before {
+	bottom: .7rem;
+}
 
 .nav__menu {
+    /* background-color: var(--azul); */
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     list-style: none;
-    padding-top: 10px;
+    padding: 1rem 4rem 4rem;
+	gap: 2rem;
+    transition: margin-top 300ms ease;
 }
 
 .nav__menu-section {
     font-family: Raleway;
-    font-size: 1.8rem;
-    margin: 0 24px;
+    font-size: 1.6rem;
     text-transform: uppercase;
-}
-
-.nav__menu-section:last-child {
-    margin: 0 0 0 24px;
 }
 
 .nav__menu-section a {
@@ -45,23 +77,57 @@
 }
 
 .nav__fixed {
-    position: fixed;
-    background-color: var(--azul);
-    transition: background-color 300ms ease;
+	position: fixed;
+	background: var(--azul);
+	transition: background 300ms ease;
 }
 
-.nav__container-fixed {
-    height: 80px;
-    transition: height 300ms ease;
-}
+@media only screen and (min-width: 768px) {
 
-.nav__logo-imgFixed {
-    height: 50px;
-    transition: height 300ms ease;
-}
+	.nav__container {
+		height: 14rem;
+		margin: 0 25rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-.nav__menu-section a:hover {
-    text-decoration: underline;
-    transition: text-decoration 300ms ease;
-}
+    .nav__toggle-btn {
+        display: none;
+      }
+ 
+	.nav__logo-img {
+		height: 6.5rem;
+	}
 
+	.nav__menu {
+        flex-direction: row;
+		background-color: transparent;
+		padding: 0;
+		gap: 3rem;
+	}
+
+	.nav__menu-section {
+		font-size: 1.8rem;
+	}
+
+	.nav__fixed {
+		position: fixed;
+		background-color: var(--azul);
+		transition: background-color 300ms ease;
+	}
+
+	.nav__container-fixed {
+		height: 8rem;
+		transition: height 300ms ease;
+	}
+
+	.nav__logo-imgFixed {
+		height: 5rem;
+	}
+
+	.nav__menu-section a:hover {
+		text-decoration: underline;
+		transition: text-decoration 300ms ease;
+	}
+}

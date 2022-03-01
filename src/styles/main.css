@@ -1,10 +1,10 @@
+
 .main {
-    background-image: url(../assets/fondoPersonas1.png);
+    /* background-image: url(../assets/fondoPersonas1.png); */
     background-size:cover;
     width: 100vw;
     max-width: 100%;
-    height: 1910px;
-    margin-bottom: 2900px;
+    height: 100vh;
+    /* margin-bottom: 2900px; */
     position: relative;
 }
-

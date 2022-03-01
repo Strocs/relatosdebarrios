@@ -1,8 +1,9 @@
 .main__descubre {
-    /* background-image: url(../assets/muralla.jpg); */
-    /* background-size:cover; */
-
-    /* height: 1000px; */
+    background-image: url(../assets/muralla2.png);
+    background-size: 85%;
+    background-position: center 0%;
+    /* background-repeat: no-repeat; */
+    height: 920px;
 }
 
 .main__descubre-wrapper {
@@ -14,7 +15,7 @@
 }
 
 .descubre__title {
-    color: var(--pastel);
+    color: var(--azul);
     text-transform: uppercase;
     font-size: 10rem;
     font-weight: 900;
@@ -24,7 +25,7 @@
 }
 
 .descubre__title span {
-    color: var(--amarillo);
+    color: var(--azul);
 }
 
 .descubre__subBar {
@@ -32,11 +33,10 @@
     height: 10px;
     background-color: var(--amarillo);
     margin-left: -250px;
-    /* margin-top: 20px; */
 }
 
 .descubre__content {
-    display: flex;
+    display: none;
     margin: 90px 200px 0;
     justify-content: space-between;
 }
@@ -51,37 +51,40 @@
 .libro__img-link,
 .docu__img-link {
     transition: transform 500ms ease;
-    width: 400px;
+    width: 500px;
     position: relative;
     
 }
 
 .libro__img,
 .docu__img {
-    width: 400px;   
+    width: 500px;   
     position: absolute;
 }
 
 .video_docu {
-    width: 300px;
+    width: 400px;
     overflow: hidden;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
+    opacity: 0;
+    transition: opacity 300ms ease; 
 }
 
 .video__docu-gif {
-    height: 270px;
-    margin-top: 30px;
-    margin-left: -120px;
+    height: 365px;
+    margin-top: 35px;
 }
+
+
 
 
 .libro__text-link,
 .docu__text-link {
-    display: flex;
+    display: none;
     justify-content: center;
     margin-top: 400px;
     text-decoration: none;
@@ -103,10 +106,9 @@
     font-weight: 500;
 }
 
-.libro__img-link:hover,
-.docu__img-link:hover {
-    /* transform: scale(1.1); */
-    transition: transform 500ms ease;  
+.docu__img-link:hover > .video_docu {
+    opacity: 1;
+    transition: opacity 300ms ease;  
 }
 
 .libro__img-link:hover + .libro__text-link ,

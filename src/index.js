@@ -10,9 +10,10 @@ import '@styles/footer.css'
 import parallaxScroll from './js/parallaxScroll'
 import navFixed from './js/navFixed'
 import urlHash from './js/urlHash'
+import displayNav from './js/displayNav'
 
 
 parallaxScroll();
 navFixed();
 urlHash()
-
+displayNav()

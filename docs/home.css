@@ -135,43 +135,75 @@ body {
 }
 
 .nav {
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-    transition: background-color 300ms ease;
+	position: absolute;
+	width: 100%;
+	z-index: 10;
+	transition: background 300ms ease;
 }
 
 .nav__container {
-    height: 140px;
-    margin: 0 250px;
+    height: 6.5rem;
+	transition: height 300ms ease;
+}
+
+.nav__container-mobile {
+    margin: 2rem 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    transition: height 300ms ease;
 }
-
 
 .nav__logo-img {
-    height: 65px;
-    transition: height 300ms ease;
+	height: 4rem;
+	transition: height 300ms ease;
 }
 
+/* TOGGLE BUTTON */
+.nav__toggle-btn {
+	cursor: pointer;
+	padding: 1.5rem 0.5rem;
+}
+
+.nav__toggle-btn span,
+.nav__toggle-btn span::before,
+.nav__toggle-btn span::after {
+	display: block;
+	background: var(--pastel);
+	height: .2rem;
+	width: 3rem;
+	border-radius: .2rem;
+	position: relative;
+}
+
+.nav__toggle-btn span::after,
+.nav__toggle-btn span::before {
+	content: '';
+	position: absolute;
+}
+
+.nav__toggle-btn span::after {
+	top: .7rem;
+}
+
+.nav__toggle-btn span::before {
+	bottom: .7rem;
+}
 
 .nav__menu {
+    /* background-color: var(--azul); */
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
     list-style: none;
-    padding-top: 10px;
+    padding: 1rem 4rem 4rem;
+	gap: 2rem;
+    transition: margin-top 300ms ease;
 }
 
 .nav__menu-section {
     font-family: Raleway;
-    font-size: 1.8rem;
-    margin: 0 24px;
+    font-size: 1.6rem;
     text-transform: uppercase;
-}
-
-.nav__menu-section:last-child {
-    margin: 0 0 0 24px;
 }
 
 .nav__menu-section a {
@@ -181,40 +213,77 @@ body {
 }
 
 .nav__fixed {
-    position: fixed;
-    background-color: var(--azul);
-    transition: background-color 300ms ease;
+	position: fixed;
+	background: var(--azul);
+	transition: background 300ms ease;
 }
 
-.nav__container-fixed {
-    height: 80px;
-    transition: height 300ms ease;
-}
+@media only screen and (min-width: 768px) {
 
-.nav__logo-imgFixed {
-    height: 50px;
-    transition: height 300ms ease;
-}
+	.nav__container {
+		height: 14rem;
+		margin: 0 25rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
 
-.nav__menu-section a:hover {
-    text-decoration: underline;
-    transition: text-decoration 300ms ease;
+    .nav__toggle-btn {
+        display: none;
+      }
+ 
+	.nav__logo-img {
+		height: 6.5rem;
+	}
+
+	.nav__menu {
+        flex-direction: row;
+		background-color: transparent;
+		padding: 0;
+		gap: 3rem;
+	}
+
+	.nav__menu-section {
+		font-size: 1.8rem;
+	}
+
+	.nav__fixed {
+		position: fixed;
+		background-color: var(--azul);
+		transition: background-color 300ms ease;
+	}
+
+	.nav__container-fixed {
+		height: 8rem;
+		transition: height 300ms ease;
+	}
+
+	.nav__logo-imgFixed {
+		height: 5rem;
+	}
+
+	.nav__menu-section a:hover {
+		text-decoration: underline;
+		transition: text-decoration 300ms ease;
+	}
 }
 
 
 .header {
-    /* height: 90vw; */
     position: relative;
-    height: 1400px;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .header__video {
     position: absolute;
-    top: 0;
-    width: 100vw;
-    max-width:100%;
-    z-index: -1;
+    height: 100vh;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: -10;
 }
+
+
 
 .header__mainText {
     position: absolute;
@@ -222,55 +291,44 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin: 0 250px;
-    padding-top: 250px;
-    margin-bottom: 100px;
+    margin: 0 2rem;
+    padding-top: 50%;
 }
 
 .header__mainText::before {
     content: '';
     background-color: var(--amarillo);
-    height: 10px;
-    width: 50vw;
-    margin-right: -250px;
+    height: .5rem;
+    width: 70vw;
+    margin-right: -2rem;
 }
 
 .header__title {
     color: white;
-    font-size: 6.4rem;
+    font-size: 3rem;
     font-weight: 800;
     text-align: right;
-    margin: 20px 0;
-    
 }
 
 .header__btn {
     display: flex;
+    gap: 1rem;
 }
 
 .header__btn-docu,
 .header__btn-libro {
-    border: 2px solid white;
-    font-size: 2rem;
+    border: .2rem solid white;
+    font-size: 1.6rem;
     letter-spacing: .5px;
     color: white;
     text-decoration: none;
-    margin-left: 30px;
     transition: color 200ms ease, background 300ms ease;
 }
 
 .header__btn-docu p,
 .header__btn-libro p {
-    margin: 5px 15px;
+    margin: .5rem 1.5rem;
     font-weight: 600;
-}
-
-.header__img {
-    position: absolute;
-    top: 595px;
-    width: 100vw;
-    max-width: 100%;
-    z-index: 2;
 }
 
 .header__btn-docu:hover,
@@ -280,16 +338,73 @@ body {
     transition: color 200ms ease, background 300ms ease;
 }
 
+.header__img {
+    position: absolute;
+    bottom: 0;
+    width: 150vw;
+    left: 50%;
+    transform: translate(-50%, 0);
+    z-index: 2;
+}
+
+@media only screen and (min-width: 768px) {
+    
+    .header {
+        height: 140rem;
+    }
+
+    .header__video {
+        top: 0;
+        width: 100vw;
+        max-width: 100%;
+        height: auto;
+    }
+    
+    .header__mainText {
+        margin: 0 250px;
+        padding-top: 250px;
+        margin-bottom: 100px;
+    }
+    
+    .header__mainText::before {
+        height: 10px;
+        width: 50vw;
+        margin-right: -250px;
+    }
+    
+    .header__title {
+        font-size: 6.4rem;
+        margin: 20px 0;
+    }
+    
+    .header__btn {
+        gap: 0;
+    }
+    
+    .header__btn-docu,
+    .header__btn-libro {
+        font-size: 2rem;
+        margin-left: 30px;
+    }
+    
+    .header__img {
+        top: 595px;
+        width: 100vw;
+        max-width: 100%;
+    }
+    
+    
+}
+
 .main {
-    background-image: url(assets/images/8af4fcab819cad8cacc6.png);
+    /* background-image: url(../assets/fondoPersonas1.png); */
     background-size:cover;
     width: 100vw;
     max-width: 100%;
-    height: 1910px;
-    margin-bottom: 2900px;
+    height: 100vh;
+    /* margin-bottom: 2900px; */
     position: relative;
 }
-
 
 /* ---EL PROYECTO--- */
 
@@ -584,10 +699,11 @@ body {
 
 
 .main__descubre {
-    /* background-image: url(../assets/muralla.jpg); */
-    /* background-size:cover; */
-
-    /* height: 1000px; */
+    background-image: url(assets/images/af244be8dae69b232eae.png);
+    background-size: 85%;
+    background-position: center 0%;
+    /* background-repeat: no-repeat; */
+    height: 920px;
 }
 
 .main__descubre-wrapper {
@@ -599,7 +715,7 @@ body {
 }
 
 .descubre__title {
-    color: var(--pastel);
+    color: var(--azul);
     text-transform: uppercase;
     font-size: 10rem;
     font-weight: 900;
@@ -609,7 +725,7 @@ body {
 }
 
 .descubre__title span {
-    color: var(--amarillo);
+    color: var(--azul);
 }
 
 .descubre__subBar {
@@ -617,11 +733,10 @@ body {
     height: 10px;
     background-color: var(--amarillo);
     margin-left: -250px;
-    /* margin-top: 20px; */
 }
 
 .descubre__content {
-    display: flex;
+    display: none;
     margin: 90px 200px 0;
     justify-content: space-between;
 }
@@ -636,37 +751,40 @@ body {
 .libro__img-link,
 .docu__img-link {
     transition: transform 500ms ease;
-    width: 400px;
+    width: 500px;
     position: relative;
     
 }
 
 .libro__img,
 .docu__img {
-    width: 400px;   
+    width: 500px;   
     position: absolute;
 }
 
 .video_docu {
-    width: 300px;
+    width: 400px;
     overflow: hidden;
     left: 0;
     right: 0;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
+    opacity: 0;
+    transition: opacity 300ms ease; 
 }
 
 .video__docu-gif {
-    height: 270px;
-    margin-top: 30px;
-    margin-left: -120px;
+    height: 365px;
+    margin-top: 35px;
 }
+
+
 
 
 .libro__text-link,
 .docu__text-link {
-    display: flex;
+    display: none;
     justify-content: center;
     margin-top: 400px;
     text-decoration: none;
@@ -688,10 +806,9 @@ body {
     font-weight: 500;
 }
 
-.libro__img-link:hover,
-.docu__img-link:hover {
-    /* transform: scale(1.1); */
-    transition: transform 500ms ease;  
+.docu__img-link:hover > .video_docu {
+    opacity: 1;
+    transition: opacity 300ms ease;  
 }
 
 .libro__img-link:hover + .libro__text-link ,
