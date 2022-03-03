@@ -112,8 +112,8 @@
 @media only screen and (min-width: 768px) {
 
 	.nav__container {
-		height: 14rem;
-		margin: 0 25rem;
+		height: 7vmax;
+		margin: 0 12.5vw;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -122,6 +122,7 @@
 	.nav__container-mobile {
 		position: relative;
 		width: auto;
+		padding: 0;
 	}
 
     .nav__toggle-btn {
@@ -129,21 +130,21 @@
       }
  
 	.nav__logo-img {
-		height: 6.5rem;
+		height: 3.25vmax;
 	}
 
 	.nav__menu {
         flex-direction: row;
 		background-color: transparent;
 		padding: 0;
-		gap: 4rem;
+		gap: 1.5vw;
 		overflow: visible;
 		width: auto;
 		height: auto;
 	}
 
 	.nav__menu-section {
-		font-size: 1.8rem;
+		font-size: .9vmax;
 		margin-right: 0;
 	}
 
@@ -158,12 +159,12 @@
 	}
 
 	.nav__container-fixed {
-		height: 8rem;
+		height: 4vmax;
 		transition: height 300ms ease;
 	}
 
 	.nav__logo-imgFixed {
-		height: 5rem;
+		height: 2.5vmax;
 	}
 
 	.nav__menu-section a:hover {
