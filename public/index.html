@@ -15,184 +15,178 @@
 		<title>Relatos de Barrios | Conjunto Habitacional Rengifo</title>
 	</head>
 	<body>
-
-
-
-        <!-- NAV BAR -->
+		<!-- NAV BAR -->
 		<nav class="nav">
+			<div class="nav__container">
+				<div class="nav__container-mobile">
+					<a class="nav__logo" href="">
+						<img class="nav__logo-img" src="/src/assets/logo.svg" alt="Relatos de Barrios Logo" />
+					</a>
 
-            <div class="nav__container">
+					<div class="nav__toggle-btn">
+						<span></span>
+					</div>
+				</div>
 
-                <div class="nav__container-mobile">
-                    <a class="nav__logo" href="">
-                        <img class="nav__logo-img" src="/src/assets/logo.svg" alt="Relatos de Barrios Logo" />
-                    </a>
-    
-                    <div class="nav__toggle-btn">
-                        <span></span>
-                    </div>
-                </div>
-
-                <ul class="nav__menu">
-                    <li class="nav__menu-section">
-                        <a href="#inicio">Inicio</a>
-                    </li>
-                    <li class="nav__menu-section">
-                        <a href="#proyecto">El Proyecto</a>
-                    </li>
-                    <li class="nav__menu-section">
-                        <a href="#planimetrias">Planimetrías</a>
-                    </li>
-                    <li class="nav__menu-section">
-                        <a href="#archivo">Archivo Fotográfico</a>
-                    </li>
-                    <li class="nav__menu-section">
-                        <a href="#libro-documental">Libro / Documental</a>
-                    </li>
-                </ul>
-            </div>
-
+				<div class="nav__menu">
+					<ul class="nav__menu-list">
+						<li class="nav__menu-section">
+							<a href="#inicio">Inicio</a>
+						</li>
+						<li class="nav__menu-section">
+							<a href="#proyecto">El Proyecto</a>
+						</li>
+						<li class="nav__menu-section">
+							<a href="#planimetrias">Planimetrías</a>
+						</li>
+						<li class="nav__menu-section">
+							<a href="#archivo">Archivo Fotográfico</a>
+						</li>
+						<li class="nav__menu-section">
+							<a href="#libro-documental">Libro / Documental</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</nav>
 
-
-
-        <!-- INICIO -->
+		<!-- INICIO -->
 		<header id="inicio" class="header">
-            
-            <video autoplay muted loop class="header__video">
-                <source src="assets/teaser.mp4" type="video/mp4">
-            </video>
+			<video autoplay muted loop class="header__video">
+				<source src="assets/teaser.mp4" type="video/mp4" />
+			</video>
 
-            <div class="header__mainText">
-                <h1 class="header__title">Imaginario Urbano,<br>Imaginario Barrial</h1>
-                <div class="header__btn">
-                    <a href="" class="header__btn-libro"><p>Ver Libro</p></a>
-                    <a href="" class="header__btn-docu"><p>Ver Documental</p></a>
-                </div>
-            </div>
+			<div class="header__title">
+				<div class="header__title-container">
+					<div class="title__container">
+						<h1 class="title">Imaginario Urbano,<br />Imaginario Barrial</h1>
+					</div>
+					<div class="btn__container">
+						<a href="" class="btn btn-libro"><p>Ver Libro</p></a>
+						<a href="" class="btn btn-docu"><p>Ver Documental</p></a>
+					</div>
+				</div>
+			</div>
 
-            <img class="header__img" src="/src/assets/casasHeaderTransparente.png" alt="Casas Rengifo, La Serena">
-        </header>
+			<img class="header__img" src="/src/assets/casasHeaderTransparente.png" alt="Casas Rengifo, La Serena" />
+		</header>
 
-        
-
-        <!-- SECTIONS -->
+		<!-- SECTIONS -->
 		<main class="main">
+			<!-- EL PROYECTO -->
+			<section id="proyecto" class="main__proyecto">
+				<div class="wrappers main__proyecto-wrapper">
+					<div class="main__proyecto-equipo">
+						<div class="equipo__wrapper">
+							<div class="proyecto__equipo"></div>
+						</div>
 
-            <!-- EL PROYECTO -->
-			<!-- <section class="main__proyecto">
-                <div id="proyecto" class="main__proyecto-wrapper">
-                    
-                    <div class="main__proyecto-equipo">
+						<div class="colab__wrapper">
+							<div class="proyecto__colab"></div>
+						</div>
+					</div>
 
-                        <div class="equipo__wrapper">
-                            <div class="proyecto__equipo">
+					<div class="main__proyecto-description">
+						<h1 class="titles proyecto__title">El Proyecto</h1>
+						<div class="proyecto__content">
+							<h3 class="proyecto__subTitle">
+								¿Qué <br />
+								queremos hacer?
+							</h3>
+							<p class="proyecto__text">
+								El proyecto busca promover y rescatar el valor patrimonial e histórico de los barrios y conjuntos habitacionales de conservación histórica, ligados al patrimonio industrial, destacando
+								la experiencia social y patrimonial detrás de la vida de sus habitantes, la dimensión comunitaria que generan estos espacios, y los aspectos esenciales que existen dentro de su
+								construcción y diseño arquitectónico.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-                            </div>
-                        </div>
+			<!-- PLANIMETRÍAS -->
+			<section id="planimetrias" class="main__domestico">
+				<div class="wrappers main__domestico-wrapper">
+					<div class="domestico__title-wrapper">
+						<h1 class="titles domestico__title">Arquitectura de lo doméstico</h1>
+						<div class="subBars domestico__subBar"></div>
+					</div>
 
-                        <div class="colab__wrapper">
-                            <div class="proyecto__colab">
+					<div class="domestico__content">
+						<p class="domestico__text">
+							Recopilación de las planimetrías y documentos físicos originales correspondientes al proyecto “Casas para obreros CCU, La Serena” posteriormente denominado como “Conjunto Habitacional
+							Rengifo”, diseñado en 1957 por el arquitecto Carlos Feuereisen Polanco, y construido en el año 1958 por Negochea y Vergara. <br />
+							<br />
+							El proyecto se ubica en el norte de la zona típica de La Serena y es de una tipología característica de la vivienda en la ciudad. Representa el estilo del Plan Serena a pesar de ser
+							posterior (1958) y denota la intención de consolidar la ciudad con edificios de vivienda.
+						</p>
 
-                            </div>
-                        </div>
+						<div class="domestico__box-container">
+							<div class="box domestico__box domestico__plani">
+								<h2 class="box-title domestico__box-title">
+									Planimetrías <br />
+									<span>Originales</span>
+								</h2>
+								<img class="box-fondo domestico__fondo" src="/src/assets/archivo.jpg" alt="Imagen de niñas en puerta de Casa Barrio Rengifo" />
+							</div>
 
-                    </div>
+							<div class="box domestico__box domestico__levan">
+								<h2 class="box-title domestico__box-title">
+									Levantamiento <br />
+									<span>Digital</span>
+								</h2>
+								<img class="box-fondo domestico__fondo" src="/src/assets/archivo.jpg" alt="Imagen de niñas en puerta de Casa Barrio Rengifo" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
 
-                    <div class="main__proyecto-description">
-                        <h1 class="proyecto__title">El Proyecto</h1>
-                        <div class="proyecto__content">
-                            <h3 class="proyecto__subTitle">¿Qué <br> queremos hacer?</h3>
-                            <p class="proyecto__text">
-                                El proyecto busca promover y rescatar el valor patrimonial e
-                                e histórico de los barrios y conjuntos habitacionales de conservación
-                                histórica, ligados al patrimonio industrial, destacando la experiencia
-                                social y patrimonial detrás de la vida de sus habitantes, la dimensión
-                                comunitaria que generan estos espacios, y los aspectos esenciales que
-                                existen dentro de su construcción y diseño arquitectónico.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </section> -->
-
-            <!-- PLANIMETRÍAS -->
-			<!-- <section id="planimetrias" class="main__domestico">
-
-                <div class="main__domestico-wrapper">
-                    <div class="domestico__title-wrapper">
-                        <h1 class="domestico__title">Arquitectura de <br> lo doméstico</h1>
-                        <div class="domestico__subBar"></div>
-                    </div>
-
-                    <div class="domestico__content">
-                        <p class="domestico__text">
-                            Recopilación de las planimetrías y documentos físicos originales 
-                            correspondientes al proyecto “Casas para obreros CCU, La Serena” 
-                            posteriormente denominado como “Conjunto Habitacional Rengifo”, 
-                            diseñado en 1957 por el arquitecto Carlos Feuereisen Polanco, y 
-                            construido en el año 1958 por Negochea y Vergara. <br> <br>
-                            El proyecto se ubica en el norte de la zona típica de La Serena 
-                            y es de una tipología característica de la vivienda en la ciudad. 
-                            Representa el estilo del Plan Serena a pesar de ser posterior (1958) 
-                            y denota la intención de consolidar la ciudad con edificios de vivienda. 
-                        </p>
-                        <div class="domestico__plani">
-                            <h2 class="domestico__box-title">Planimetrías <br> <span>Originales</span> </h2>
-                        </div>
-                        <div class="domestico__levan">
-                            <h2 class="domestico__box-title">Levantamiento <br> <span>Digital</span> </h2>
-    
-                        </div>
-                    </div>
-                </div>
-
-            </section> -->
-
-            <!-- ARCHIVO FOTOGRÁFICO -->
-			<!-- <section id="archivo" class="main__imaginario">
+			<!-- ARCHIVO FOTOGRÁFICO -->
+			<!-- <section class="main__imaginario">
                 <div class="imaginario__imgTransition">
                     <img src="/src/assets/fachada.png" alt="Fachada Calle Rengifo">
                 </div>
-                <div class="main__imaginario-wrapper">
+                <div id="archivo" class="wrappers main__imaginario-wrapper">
                     <div class="imaginario__title-wrapper">
-                        <h1 class="imaginario__title">Imaginario Urbano <br> <span>Imaginario Barrial</span></h1>
-                        <div class="imaginario__subBar"></div>
+                        <h1 class="titles imaginario__title">Imaginario Urbano <br> <span>Imaginario Barrial</span></h1>
+                        <div class="subBars imaginario__subBar"></div>
                     </div>
     
                     <div class="imaginario__content">
                         <div class="imaginario__fotos">
-                            <div class="imaginario__box imaginario__fotos-archivo">
-                                <h2 class="imaginario__boxTitle"><span>Archivo</span> <br> Fotográfico</h2>
-                                <img class="imaginario__fondo-archivo" src="/src/assets/archivo.jpg" alt="Imagen de niñas en puerta de Casa Barrio Rengifo">
+                            <div class="box imaginario__box imaginario__fotos-archivo">
+                                <h2 class="box-title imaginario__box-title"><span>Archivo</span> <br> Fotográfico</h2>
+                                <img class="box-fondo imaginario__fondo" src="/src/assets/archivo.jpg" alt="Imagen de niñas en puerta de Casa Barrio Rengifo">
                             </div>
-                            <div class="imaginario__box imaginario__fotos-activ">
-                                <h2 class="imaginario__boxTitle"><span>Fotografías</span> <br> Actividades</h2>
+                            <div class="box imaginario__box imaginario__fotos-activ">
+                                <h2 class="box-title imaginario__box-title"><span>Fotografías</span> <br> Actividades</h2>
+                                <img class="box-fondo imaginario__fondo" src="/src/assets/archivo.jpg" alt="Imagen de niñas en puerta de Casa Barrio Rengifo">
                             </div>
-                            <div class="imaginario__box imaginario__fotos-aereas">
-                                <h2 class="imaginario__boxTitle"><span>Fotografías</span> <br> Aéreas</h2>
+                            <div class="box imaginario__box imaginario__fotos-aereas">
+                                <h2 class="box-title imaginario__box-title"><span>Fotografías</span> <br> Aéreas</h2>
+                                <img class="box-fondo imaginario__fondo" src="/src/assets/archivo.jpg" alt="Imagen de niñas en puerta de Casa Barrio Rengifo">
                             </div>
                         </div>
                         <div class="imaginario__3d">
-                            <div class="imaginario__box3d imaginario__3d-exterior">
-                                 <h2 class="imaginario__boxTitle"><span>Recorrido 3D</span> <br> Exterior</h2>
-                            </div>
-                            <div class="imaginario__box3d imaginario__3d-interior">
-                                 <h2 class="imaginario__boxTitle"><span>Recorrido 3D</span> <br> Interior</h2>
-                            </div>
+                            <a target="_blank" href="../public/recorrido-exterior/index.html" class="box imaginario__3dbox imaginario__3d-exterior">
+                                <h2 class="box-title imaginario__box-title"><span>Recorrido 3D</span> <br> Exterior</h2>
+                                <img class="box-fondo imaginario__fondo3d" src="/src/assets/archivo.jpg" alt="Imagen de niñas en puerta de Casa Barrio Rengifo">
+                            </a>
+                            <a target="_blank" href="../public/recorrido-interior/index.html" class="box imaginario__3dbox imaginario__3d-interior">
+                                 <h2 class="box-title imaginario__box-title"><span>Recorrido 3D</span> <br> Interior</h2>
+                                 <img class="box-fondo imaginario__fondo3d" src="/src/assets/archivo.jpg" alt="Imagen de niñas en puerta de Casa Barrio Rengifo">
+                            </a>
                         </div>
                     </div>
                 </div>
-
             </section> -->
-            <!-- LIBRO DOCUMENTAL -->
+
+			<!-- LIBRO DOCUMENTAL -->
 			<!-- <section id="libro-documental" class="main__descubre">
-                <div class="main__descubre-wrapper">
+                <div class="wrappers main__descubre-wrapper">
                     <div class="descubre__title-wrapper">
-                        <h1 class="descubre__title">Descubre <br> <span>Relatos de Barrios</span></h1>
-                        <div class="descubre__subBar"></div>
+                        <h1 class="titles descubre__title">Descubre <br> <span>Relatos de Barrios</span></h1>
+                        <div class="subBars descubre__subBar"></div>
                     </div>
 
                     <div class="descubre__content">
@@ -207,9 +201,7 @@
                         </div>
                         <div class="descubre__docu-wrapper">
                             <a href="" class="docu__img-link">
-                                <div class="video_docu">
-                                    <img src="/src/assets/VideoGif.gif" alt="" class="video__docu-gif">
-                                </div>
+                                <div class="video__docu"></div>
                                 <img class="docu__img" src="/src/assets/ventana2-1.png" alt="Ventana Casa Renfigo La Serena">
                             </a>
                             <a href="" class="docu__text-link">
@@ -220,14 +212,11 @@
                     </div>
                 </div>
             </section> -->
-
 		</main>
 
-
-
-        <!-- FOOTER -->
+		<!-- FOOTER -->
 		<!-- <footer class="footer">
-            <div class="footer__wrapper">
+            <div class="wrappers footer__wrapper">
                 <img class="footer__logo" src="/src/assets/logoWhite.svg" alt="Relatos de Barrios Logo">
                 <div class="footer__info">
                     <p class="footer__info-text">
@@ -251,10 +240,8 @@
             </div>
         </footer> -->
 
-
-        <!-- <div class="stickers">
+		<!-- <div class="stickers">
             <img src="" alt="">
         </div> -->
-
 	</body>
 </html>

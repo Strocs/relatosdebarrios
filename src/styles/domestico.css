@@ -1,80 +1,71 @@
-.main__domestico {
-    padding-top: 150px;
-    height: 1100px;
-    position: relative;
-}
-
-.main__domestico-wrapper {
-    margin: 0 250px;
-    position: relative;
-}
+/* CONTENEDOR DEL TITULO */
 
 .domestico__title {
-    color: var(--pastel);
-    text-transform: uppercase;
-    font-size: 10rem;
-    font-weight: 900;
-    line-height: .9;
-    margin: 0;
-    padding: 0;
+	color: var(--pastel);
+	max-width: 100rem;
 }
 
 .domestico__subBar {
-    width: 60vw;
-    height: 10px;
-    background-color: var(--amarillo);
-    margin-left: -250px;
-    margin-top: 20px;
+	left: 0;
 }
 
+/* CONTENEDOR DE LAS CAJAS */
 .domestico__content {
-    display: flex;
-    height: 290px;
-    justify-content: space-between;
-    margin-top: 80px;
-
+	display: flex;
+	justify-content: space-between;
+	margin-top: 8rem;
+	gap: 3rem;
+	width: auto;
 }
 
 .domestico__text {
-    color: var(--pastel);
-    width: 430px;
-    font-size: 2.1rem;
-    display: inline-block;
-    font-size: 1.8rem;
-    font-weight: 300;
-    margin: 0;
-    text-align: justify;
+	color: var(--pastel);
+	width: 100%;
+	max-width: 42rem;
+	min-width: 30rem;
+	min-height: 20rem;	
+	font-size: 1.8rem;
+	font-weight: 300;
+	margin: 0;
+	text-align: justify;
 }
 
-.domestico__plani,
-.domestico__levan {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    width: 430px;
-    background-color: var(--pastel);
-    transition: transform 500ms ease;
-    cursor: pointer;
+.domestico__box-container {
+	display: flex;
+	width: 100%;
+	gap: 3rem;
 }
 
-.domestico__box-title {
-    color: var(--azul);
-    font-weight: 800;
-    font-size: 4rem;   
-    text-transform: uppercase;
-    line-height: .7;
-    margin: 20px;
+.domestico__box {
+	background-color: var(--pastel);
 }
 
-.domestico__box-title span {
-    font-weight: 500;
-    font-size: 2.5rem;
+/* TABLETS */
+@media only screen and (max-width: 1194px) {
+	.domestico__title {
+		max-width: 80rem;
+		min-width: 10rem;
+		word-break: break-word;
+	}
+
+	.domestico__content {
+		flex-direction: column;
+		align-items: center;
+	}
+	.domestico__box-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.domestico__text {
+		max-width: 60rem;
+	}
 }
 
-.domestico__plani:hover,
-.domestico__levan:hover {
-    transform: scale(1.1);
-    transition: transform 500ms ease;
+/* MOBILES */
+@media only screen and (max-width: 412px) {
+
+	.domestico__text {
+		font-size: 1.6rem;
+	}
 }
-
-

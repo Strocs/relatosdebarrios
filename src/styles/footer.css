@@ -1,29 +1,29 @@
 .footer {
     background-image: url(../assets/muroPiedra.png);
-    background-size: cover;
-    height: 860px;
+    background-position: top;
+
 }
 
 .footer__wrapper {
     display: flex;
-    justify-content: space-between;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    height: 860px;
-    padding-top: 280px;
-    margin: 0 250px
+    height: 84rem;
+    padding-top: 20rem;
+    padding-bottom: 5rem;
 }
 
 .footer__logo {
-    width: 600px;
+    width: 60rem;
 }
 
 .footer__info {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 30px;
     align-items: center;
-    gap: 50px;
+    gap: 5rem;
+
 }
 
 .footer__info-text {
@@ -35,12 +35,12 @@
 .footer__info-rrss {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
+    gap: 1.5rem;
 }
 
 
 
 .rrss {
-    height: 30px;
+    height: 3rem;
 }
 

@@ -1,88 +1,45 @@
 .nav {
-	position: absolute;
-	z-index: 100;
+	position: fixed;
+	width: 100vw;
 	transition: background-color 300ms ease;
-	max-width: 100vw;
-	right: 0;
-	left: 0;
+	z-index: 100;
 }
 
 .nav__container {
-    height: 8rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 14rem;
+	max-width: 1500px;
+	padding: 0 5rem;
+	margin: 0 auto;
 	transition: height 300ms ease;
 }
 
 .nav__container-mobile {
-    padding: 2rem 4rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-	position: absolute;
-	width: 100vw;
-	z-index: 10;
+}
+
+.nav__toggle-btn {
+	display: none;
 }
 
 .nav__logo-img {
-	height: 4rem;
+	height: 6.5rem;
 	transition: height 300ms ease;
 }
 
-/* TOGGLE BUTTON */
-.nav__toggle-btn {
-	cursor: pointer;
-	padding: 1.5rem 0.5rem;
-}
-
-.nav__toggle-btn span,
-.nav__toggle-btn span::before,
-.nav__toggle-btn span::after {
-	display: block;
-	background: var(--pastel);
-	height: .2rem;
-	width: 3rem;
-	border-radius: .2rem;
-	position: relative;
-}
-
-.nav__toggle-btn span::after,
-.nav__toggle-btn span::before {
-	content: '';
-	position: absolute;
-}
-
-.nav__toggle-btn span::after {
-	top: .7rem;
-}
-
-.nav__toggle-btn span::before {
-	bottom: .7rem;
-}
 
 /* MENU */
-
-.nav__menu {
-    background-color: var(--azul);
+.nav__menu-list {
     display: flex;
-    flex-direction: column;
     align-items: flex-end;
     list-style: none;
-	gap: 2rem;
-    transition: height 300ms ease;
-	overflow: hidden;
-	width: 100vw;
-	margin: 0;
-	height: 0rem;
+	gap: 4rem;
 }
 
 .nav__menu-section {
-	margin-right: 4rem;
-    font-family: Raleway;
-    font-size: 1.6rem;
+	font-size: 1.6rem;
     text-transform: uppercase;
-}
-
-.nav__menu-section:first-child {
-	padding-top: 8rem;
 }
 
 .nav__menu-section a {
@@ -91,84 +48,120 @@
     transition: text-decoration 300ms ease;
 }
 
-.nav__fixed {
-	position: fixed;
-	transition: background-color 300ms ease;
+
+.nav__container-fixed {
+	height: 8rem;
+	transition: height 300ms ease;
 }
 
+.nav__logo-imgFixed {
+	height: 5rem;
+}
 
-/* ADICIONES */
+.nav__menu-section a:hover {
+	text-decoration: underline;
+	transition: text-decoration 300ms ease;
+}
+
+/* ACCIONES */
 
 .bgBlue {
 	background-color: var(--azul);
 }
 
-.setHeight {
-	height: 28rem;
-}
-
-
-
-@media only screen and (min-width: 768px) {
-
+/* TABLETS */
+@media only screen and (max-width: 1094px) {
+	
 	.nav__container {
-		height: 7vmax;
-		margin: 0 12.5vw;
+		display: block;
+		height: 8rem;
+		padding: 0;
+	}
+	
+	.nav__container-mobile {
+		position: absolute;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		max-width: 700px;
+		padding: 2rem 4rem;
+		margin: 0 auto;
+		left: 0;
+		right: 0;
+		z-index: 10;
 	}
-
-	.nav__container-mobile {
-		position: relative;
-		width: auto;
-		padding: 0;
-	}
-
-    .nav__toggle-btn {
-        display: none;
-      }
- 
+	
 	.nav__logo-img {
-		height: 3.25vmax;
+		height: 4rem;
 	}
-
+	
+	/* TOGGLE BUTTON */
+	.nav__toggle-btn {
+		display: block;
+		cursor: pointer;
+		padding: 1.5rem 0.5rem;
+	}
+	
+	.nav__toggle-btn span,
+	.nav__toggle-btn span::before,
+	.nav__toggle-btn span::after {
+		display: block;
+		background: var(--pastel);
+		height: .2rem;
+		width: 3rem;
+		border-radius: .2rem;
+		position: relative;
+	}
+	
+	.nav__toggle-btn span::after,
+	.nav__toggle-btn span::before {
+		content: '';
+		position: absolute;
+	}
+	
+	.nav__toggle-btn span::after {
+		top: .7rem;
+	}
+	
+	.nav__toggle-btn span::before {
+		bottom: .7rem;
+	}
+	
+	/* MENU */
+	
 	.nav__menu {
-        flex-direction: row;
-		background-color: transparent;
-		padding: 0;
-		gap: 1.5vw;
-		overflow: visible;
-		width: auto;
-		height: auto;
-	}
-
-	.nav__menu-section {
-		font-size: .9vmax;
-		margin-right: 0;
-	}
-
-	.nav__menu-section:first-child {
-		padding-top: 0rem;
-	}
-
-	.nav__fixed {
-		position: fixed;
 		background-color: var(--azul);
-		transition: background-color 300ms ease;
+		height: 0rem;
+		width: 100vw;
+		overflow: hidden;
+		transition: height 400ms ease;
 	}
 
-	.nav__container-fixed {
-		height: 4vmax;
+	.nav__menu-list {
+		flex-direction: column;
+		gap: 2rem;
+		max-width: 700px;
+		margin: 0 auto;
+	}
+	
+	.nav__menu-section {
+		margin-right: 4rem;
+		max-width: 700px;
+	}
+	
+	.nav__menu-section:first-child {
+		padding-top: 8rem;
+	}
+	
+	/* ACCIONES */
+	
+	.setHeight {
+		height: 28rem;
 		transition: height 300ms ease;
 	}
+}
 
-	.nav__logo-imgFixed {
-		height: 2.5vmax;
-	}
+/* MOBILES */
+@media only screen and (max-width: 412px) {
 
-	.nav__menu-section a:hover {
-		text-decoration: underline;
-		transition: text-decoration 300ms ease;
-	}
 }

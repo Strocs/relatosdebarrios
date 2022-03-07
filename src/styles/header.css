@@ -1,124 +1,141 @@
-
+/* MAIN CONTAINER */
 .header {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
+	position: relative;
+	overflow: hidden;
+	height: 145vmin;
 }
 
+/* VIDEO */
 .header__video {
-    position: absolute;
-    height: 100vh;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: -10;
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	right: 0;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%, 0);
+	z-index: -10;
 }
 
-
-
-.header__mainText {
-    position: absolute;
-    right: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 25vh 2rem 0 0;
-}
-
-.header__mainText::before {
-    content: '';
-    background-color: var(--amarillo);
-    height: .5rem;
-    width: 70vw;
-    margin-right: -2rem;
-}
-
-.header__title {
-    color: white;
-    font-size: 3rem;
-    font-weight: 800;
-    text-align: right;
-}
-
-.header__btn {
-    display: flex;
-    gap: 1rem;
-}
-
-.header__btn-docu,
-.header__btn-libro {
-    border: .2rem solid white;
-    font-size: 1.6rem;
-    letter-spacing: .5px;
-    color: white;
-    text-decoration: none;
-    transition: color 200ms ease, background 300ms ease;
-}
-
-.header__btn-docu p,
-.header__btn-libro p {
-    margin: .5vmin 1.5vmin;
-    font-weight: 600;
-}
-
-.header__btn-docu:hover,
-.header__btn-libro:hover {
-    color: var(--azul);
-    background: white;
-    transition: color 200ms ease, background 300ms ease;
-}
-
+/* BOTTOM IMG */
 .header__img {
-    position: absolute;
-    bottom: 0;
-    width: 150vw;
-    left: 50%;
-    transform: translate(-50%, 0);
-    z-index: 2;
+	position: absolute;
+	bottom: 0;
+	width: 100vw;
+	left: 0;
 }
 
-@media only screen and (min-width: 768px) {
-    
-    .header {
-        height: 75vmax;
-    }
+/* TITLE SECTION */
+.header__title {
+	position: absolute;
+	width: 100vw;
+}
 
-    .header__video {
-        top: 0;
-        width: auto;
-        max-width: auto;
-        height: 150vh;
-        max-height: 100%;
-    }
-    
-    .header__mainText {
-        margin-right: 12.5vw;
-    }
-    
-    .header__mainText::before {
-        height: 1vmin;
-        width: 50vw;
-        margin-right: -12.5vw;
-    }
-    
-    .header__title {
-        font-size: 6.4vmin;
-        margin: 20px 0;
-    }
-    
-    .header__btn {
-        gap: 3rem;
-    }
-    
-    .header__btn-docu,
-    .header__btn-libro {
-        font-size: 2vmin;
-    }
-    
-    .header__img {
-        width: 100vw;
-        max-width: 100%;
-        bottom: 0   ;
-    }
-    
-    
+.header__title-container {
+	max-width: 1500px;
+	margin: 20vh auto 0;
+	padding-right: 5rem;
+}
+
+.title__container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+
+/* UPPER LINE */
+.title__container::before {
+	content: '';
+	background-color: var(--amarillo);
+	height: 1rem;
+	width: 60vmax;
+	position: absolute;
+	right: 0;
+}
+
+.title {
+	color: white;
+	font-size: 6.4rem;
+	margin: 2rem 0;
+	font-weight: 800;
+	text-align: right;
+}
+
+.btn__container {
+	display: flex;
+	gap: 3rem;
+	justify-content: flex-end;
+}
+
+.btn {
+	border: 0.1em solid white;
+	font-size: 2rem;
+	letter-spacing: 0.5px;
+	color: white;
+	text-decoration: none;
+	transition: color 200ms ease, background 300ms ease;
+}
+
+.btn p {
+	margin: 0.25em 0.75em;
+	font-weight: 600;
+}
+
+.btn:hover {
+	color: var(--azul);
+	background: white;
+	transition: color 200ms ease, background 300ms ease;
+}
+
+/* TABLETS */
+@media only screen and (max-width: 1194px) {
+	/* MAIN CONTAINER */
+	.header {
+		height: 120vmax;
+	}
+
+	/* BOTTOM IMG */
+	.header__img {
+		width: 150vw;
+		left: 50%;
+		transform: translate(-50%, 0);
+	}
+
+	/* TITLE SECTION */
+	.header__title-container {
+		margin: 25vh auto 0;
+	}
+
+	.title {
+		font-size: 5rem;
+	}
+
+}
+
+/* MOBILES */
+@media only screen and (max-width: 412px) {
+	.header {
+		height: 100vmax;
+	}
+
+	.header__title-container {
+		padding-right: 2rem;
+	}
+
+    .title__container::before {
+		height: 0.5rem;
+		width: 60vmin;
+	}
+
+    .title {
+		font-size: 3rem;
+	}
+
+	.btn__container {
+		gap: 1rem;
+	}
+
+	.btn {
+		font-size: 1.6rem;
+	}
 }

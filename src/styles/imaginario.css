@@ -1,25 +1,17 @@
 .main__imaginario {
     background-color: var(--pastel);
-    height: 1400px;
+    overflow: hidden;
 }
 
 .imaginario__imgTransition img {
-    margin-top: -300px;
-    width: 100%;
+    background-color: var(--azul);
+    width: 100vw;
+    margin-bottom: -12rem;
 }
 
-.main__imaginario-wrapper {
-    margin: 0 250px;
-}
-
+/* CONTENIDO DEL TITULO */
 .imaginario__title {
     color: var(--azul);
-    text-transform: uppercase;
-    font-size: 10rem;
-    font-weight: 900;
-    line-height: .9;
-    margin: 0;
-    padding: 0;
     text-align: right;
 }
 
@@ -28,91 +20,45 @@
 }
 
 .imaginario__subBar {
-    width: 60vw;
-    height: 10px;
-    background-color: var(--amarillo);
-    margin-left: 500px;
-    margin-top: 20px;
+    right: 0;
 }
 
-
+/* CONTENEDOR DE LAS CAJAS */
 .imaginario__content {
-    margin-bottom: 500px;
+    /* padding-bottom: 50rem; */
 }
 
 .imaginario__fotos {
     display: flex;
-    height: 290px;
     justify-content: space-between;
-    margin-top: 80px;
+    margin-top: 8rem;
+    gap: 3rem;
+    min-height: 20rem;
 }
 
 .imaginario__box {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    width: 430px;
     background-color: var(--azul);
-    transition: transform 300ms ease;
-    overflow: hidden;
-    position: relative;
-    cursor: pointer;
 }
 
-.imaginario__boxTitle {
-    color: var(--pastel);
-    font-weight: 800;
-    font-size: 4rem;   
-    text-transform: uppercase;
-    margin: 20px;
+.imaginario__box-title {
     line-height: 1;
-    position: absolute;
-    z-index: 2;
 }
 
-.imaginario__boxTitle span {
-    font-weight: 500;
-    font-size: 2.5rem;
-}
-
+/* CAJAS 3D */
 .imaginario__3d {
     display: flex;
-    height: 290px;
     justify-content: space-between;
+    gap: 3rem;
     margin-top: 50px;
+    height: 30rem;
+    min-height: 20rem;
 }
 
-.imaginario__box3d {
-    display: flex;
-    align-items: flex-end;
-    position: relative;
-    width: 670px;
+.imaginario__3dbox {
+    width: 67rem;
     background-color: var(--azul);
-    transition: transform 500ms ease;
-    cursor: pointer;
 }
 
-.imaginario__box:hover,
-.imaginario__box3d:hover {
-    transform: scale(1.1);
-    transition: transform 500ms ease;
+.imaginario__fondo3d {
+    width: 67rem;
 }
-
-.imaginario__box:hover > .imaginario__fondo-archivo {
-    transform: scale(1.4);
-    transition: transform 2s ease;
-}
-
-
-.imaginario__fondo-archivo {
-    width: 430px;
-    position: absolute;
-    z-index: 1;
-    top: 0; 
-    bottom: 0; 
-    margin-top: auto; 
-    margin-bottom: auto; 
-    transition: transform 1s ease;
-}
-
-

@@ -2,7 +2,7 @@
 
 const parallaxScroll = () => {
     const video = document.querySelector('.header__video')
-    const text = document.querySelector('.header__mainText')
+    const text = document.querySelector('.header__title')
 
     window.addEventListener('scroll', function() {
         let value = window.scrollY;

@@ -1,10 +1,124 @@
 
 .main {
-    /* background-image: url(../assets/fondoPersonas1.png); */
-    background-size:cover;
-    width: 100vw;
-    max-width: 100%;
-    height: 100vh;
-    /* margin-bottom: 2900px; */
+    background-image: url(../assets/fondoPersonas1.png);
+    background-position: top;
+    height: 190rem;
+    margin-bottom: 2500px;
+}
+
+.wrappers {
+    max-width: 1500px;
+    margin: 0 auto;
+    padding: 12rem 5rem;
+}
+
+.titles {
+    text-transform: uppercase;
+    font-size: 10rem;
+    font-weight: 900;
+    line-height: .9;
+    margin: 0;
+    padding: 0;
+}
+
+.subBars {
+    background-color: var(--amarillo);
+    position: absolute;
+    width: 60vmax;
+    height: 1rem;
+    margin-top: 2rem;
+}
+
+.box {
     position: relative;
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    max-width: 46rem;
+    min-width: 37rem;
+    min-height: 20rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 500ms ease;
+}
+
+.box-title {
+    position: absolute;
+    color: var(--pastel);
+    font-weight: 800;
+    font-size: 4rem;   
+    margin: 2rem;
+    line-height: .7;
+    text-transform: uppercase;
+    z-index: 2;
+}
+
+.box-title span {
+    font-weight: 500;
+    font-size: 2.5rem;
+}
+
+.box:hover {
+    transform: scale(1.1);
+    transition: transform 500ms ease;
+}
+
+/* IMAGEN DE LAS CAJAS */
+.box-fondo {
+    position: absolute;
+    width: 100%;
+    min-width: 30rem;
+    top: 0; 
+    bottom: 0; 
+    margin-top: auto; 
+    margin-bottom: auto; 
+    z-index: 1;
+    transition: transform 500ms ease;
+}
+
+.box:hover > .box-fondo {
+    transform: scale(1.4);
+    transition: transform 2000ms ease;
+}
+
+
+/* TABLETS */
+@media only screen and (max-width: 1194px) {
+    .titles {
+        font-size: 8rem;
+    }
+
+    .subBars {
+        width: 60vmin;
+    }
+
+    .box {
+        max-width: 60rem;
+    }
+}
+
+/* MOBILES */
+@media only screen and (max-width: 412px) {
+
+    .wrappers {
+        padding: 10rem 3rem;
+    }
+    .titles {
+        font-size: 3.8rem;
+        /* overflow-wrap: break-word; */
+    }
+
+    .box {
+        min-width: 30rem;
+        min-height: 10rem;
+    }
+
+    .box-title {
+        font-size: 3rem;   
+    }
+
+    .box-title span {
+        font-size: 1.6rem;
+    }
+
 }

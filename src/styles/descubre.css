@@ -1,43 +1,19 @@
-.main__descubre {
-    background-image: url(../assets/muralla2.png);
-    background-size: 85%;
-    background-position: center 0%;
-    /* background-repeat: no-repeat; */
-    height: 920px;
-}
-
-.main__descubre-wrapper {
-    margin: 0 250px;
-    padding-top: 130px;
-}
-
-.descubre__title-wrapper {
-}
 
 .descubre__title {
-    color: var(--azul);
-    text-transform: uppercase;
-    font-size: 10rem;
-    font-weight: 900;
-    line-height: .9;
-    margin: 0;
-    padding: 0;
+    color: var(--pastel);
 }
 
 .descubre__title span {
-    color: var(--azul);
+    /* color: var(--grey); */
 }
 
 .descubre__subBar {
-    width: 60vw;
-    height: 10px;
-    background-color: var(--amarillo);
-    margin-left: -250px;
+    left: 0;
 }
 
 .descubre__content {
-    display: none;
-    margin: 90px 200px 0;
+    display: flex;
+    margin: 9rem 10rem 0;
     justify-content: space-between;
 }
 
@@ -50,43 +26,39 @@
 
 .libro__img-link,
 .docu__img-link {
-    transition: transform 500ms ease;
-    width: 500px;
     position: relative;
+    transition: transform 500ms ease;
     
 }
 
 .libro__img,
 .docu__img {
-    width: 500px;   
-    position: absolute;
+    height: 40rem;   
 }
 
-.video_docu {
-    width: 400px;
-    overflow: hidden;
+.video__docu {
+    background-image: url(../assets/VideoGif.gif);
+    position: absolute;
+    width: 35rem;
+    height: 32rem;
     left: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
-    position: absolute;
+    margin: 3.5rem auto;
     opacity: 0;
     transition: opacity 300ms ease; 
+    z-index: -10;
+    box-shadow: 0 0 4rem 4rem var(--azul) inset;
+    filter: contrast(200%);
 }
 
 .video__docu-gif {
-    height: 365px;
-    margin-top: 35px;
+
 }
-
-
-
 
 .libro__text-link,
 .docu__text-link {
-    display: none;
+    display: flex;
     justify-content: center;
-    margin-top: 400px;
     text-decoration: none;
     transition: opacity 500ms ease;
     opacity: 0;
@@ -94,7 +66,7 @@
 
 .libro__text-link img,
 .docu__text-link img {
-    width: 50px;
+    width: 5rem;
 }
 
 .libro__text-link h3,
@@ -106,7 +78,7 @@
     font-weight: 500;
 }
 
-.docu__img-link:hover > .video_docu {
+.docu__img-link:hover > .video__docu {
     opacity: 1;
     transition: opacity 300ms ease;  
 }
