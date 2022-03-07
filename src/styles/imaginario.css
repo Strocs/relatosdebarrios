@@ -49,16 +49,56 @@
     display: flex;
     justify-content: space-between;
     gap: 3rem;
-    margin-top: 50px;
-    height: 30rem;
+    margin-top: 5rem;
+    /* height: 30rem; */
     min-height: 20rem;
 }
 
 .imaginario__3dbox {
-    width: 67rem;
+    max-width: 67rem;
     background-color: var(--azul);
 }
 
-.imaginario__fondo3d {
-    width: 67rem;
+
+/* TABLETS */
+@media only screen and (max-width: 1194px) {
+    .imaginario__imgTransition img {
+        background-color: var(--azul);
+        width: 200vw;
+        margin-bottom: -12rem;
+    }
+
+    .imaginario__title {
+        /* max-width: 80rem;
+		min-width: 10rem; */
+    }
+
+    .imaginario__fotos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* CAJAS 3D */
+    .imaginario__3d {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 10rem;
+    }
+
+    .imaginario__3dbox {
+        max-width: 60rem;
+    }
 }
+
+/* MOBILES */
+@media only screen and (max-width: 412px) {
+    .imaginario__3d {
+        margin-top: 6rem;
+    }
+
+    .imaginario__3dbox {
+        min-width: 30rem;
+        min-width: 10rem;
+    }
+}
+

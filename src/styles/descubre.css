@@ -15,6 +15,7 @@
     display: flex;
     margin: 9rem 10rem 0;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .descubre__libro-wrapper,
@@ -90,3 +91,44 @@
 }
 
 
+/* TABLETS */
+@media only screen and (max-width: 1194px) {
+
+    .main__descubre {
+    }
+
+    .descubre__content {
+        margin: 10rem 0 0;
+        gap: 8rem;
+        justify-content: space-around;
+    }
+
+    .descubre__libro-wrapper,
+    .descubre__docu-wrapper {
+        max-width: 50rem;
+        width: 100%;
+    }
+
+    .libro__img,
+    .docu__img {
+        height: auto;
+        width: 100%;
+    }
+
+    .libro__text-link,
+    .docu__text-link {
+        opacity: 1;
+    }
+
+
+}
+
+/* MOBILES */
+@media only screen and (max-width: 412px) {
+    .descubre__libro-wrapper,
+    .descubre__docu-wrapper {
+        max-width: 30rem;
+        width: auto;
+    }
+
+}

@@ -45,7 +45,6 @@
 	.domestico__title {
 		max-width: 80rem;
 		min-width: 10rem;
-		word-break: break-word;
 	}
 
 	.domestico__content {

@@ -1,15 +1,18 @@
 
 .main {
     background-image: url(../assets/fondoPersonas1.png);
+    background-color: var(--blue);
     background-position: top;
-    height: 190rem;
-    margin-bottom: 2500px;
+    background-repeat: no-repeat;
+    /* height: 190rem; */
+    /* margin-bottom: 2500px; */
 }
 
 .wrappers {
     max-width: 1500px;
     margin: 0 auto;
     padding: 12rem 5rem;
+    overflow: hidden;
 }
 
 .titles {
@@ -84,8 +87,14 @@
 
 /* TABLETS */
 @media only screen and (max-width: 1194px) {
+
+    .main {
+
+    }
+
     .titles {
         font-size: 8rem;
+        word-wrap: break-word;
     }
 
     .subBars {
@@ -105,7 +114,6 @@
     }
     .titles {
         font-size: 3.8rem;
-        /* overflow-wrap: break-word; */
     }
 
     .box {

@@ -74,17 +74,17 @@
 	
 	.nav__container {
 		display: block;
-		height: 8rem;
+		height: 10rem;
 		padding: 0;
 	}
 	
 	.nav__container-mobile {
 		position: absolute;
 		display: flex;
+		height: 100%;
 		justify-content: space-between;
 		align-items: center;
-		max-width: 700px;
-		padding: 2rem 4rem;
+		padding: 0 5rem;
 		margin: 0 auto;
 		left: 0;
 		right: 0;
@@ -140,28 +140,39 @@
 	.nav__menu-list {
 		flex-direction: column;
 		gap: 2rem;
-		max-width: 700px;
 		margin: 0 auto;
+		padding: 0 5rem;
 	}
 	
 	.nav__menu-section {
-		margin-right: 4rem;
+		/* margin-right: 4rem; */
 		max-width: 700px;
 	}
 	
 	.nav__menu-section:first-child {
-		padding-top: 8rem;
+		padding-top: 10rem;
 	}
 	
 	/* ACCIONES */
 	
 	.setHeight {
-		height: 28rem;
+		height: 32rem;
+		transition: height 300ms ease;
+	}
+
+	.nav__container-fixed {
+		height: 7rem;
 		transition: height 300ms ease;
 	}
 }
 
 /* MOBILES */
 @media only screen and (max-width: 412px) {
+	.nav__container-mobile {
+		padding: 0 4rem;
+	}
 
+	.nav__menu-list {
+		padding: 0 4rem;
+	}
 }
