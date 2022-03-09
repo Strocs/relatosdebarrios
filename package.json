@@ -38,6 +38,7 @@
     "html-loader": "^2.1.2",
     "html-webpack-plugin": "^5.3.1",
     "mini-css-extract-plugin": "^1.6.2",
+    "postcss-loader": "^6.2.1",
     "terser-webpack-plugin": "^5.1.1",
     "url-loader": "^4.1.1",
     "webpack": "^5.28.0",
@@ -47,7 +48,11 @@
   },
   "dependencies": {
     "@glidejs/glide": "^3.5.2",
+    "@splidejs/splide": "^3.6.12",
     "animate.css": "^4.1.1",
-    "underscore": "^1.13.1"
-  }
+    "postcss-preset-env": "^7.4.2"
+  },
+  "browserslist": [
+    "last 4 versions"
+  ]
 }

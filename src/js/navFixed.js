@@ -1,19 +1,18 @@
+import {nav, navContainer, navLogo} from './';
+
 const navFixed = () => {
-  const bar = document.querySelector('.nav')
-  const container = document.querySelector('.nav__container')    
-  const logo = document.querySelector('.nav__logo-img')
     
     window.onscroll = function(){
         let top = window.scrollY;
 
-        top > 0 ? 	(bar.classList.add('nav__fixed', 'bgBlue'), 
-                    container.classList.add('nav__container-fixed'),
-                    logo.classList.add('nav__logo-imgFixed')
+        top > 0 ? 	(nav.classList.add('nav__fixed', 'bgBlue'), 
+                    navContainer.classList.add('nav__container-fixed'),
+                    navLogo.classList.add('nav__logo-imgFixed')
                     ) 
                 : 
-                    (bar.classList.remove('nav__fixed', 'bgBlue'),
-                    container.classList.remove('nav__container-fixed'),
-                    logo.classList.remove('nav__logo-imgFixed')
+                    (nav.classList.remove('nav__fixed', 'bgBlue'),
+                    navContainer.classList.remove('nav__container-fixed'),
+                    navLogo.classList.remove('nav__logo-imgFixed')
                     );
 
   };

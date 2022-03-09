@@ -8,7 +8,7 @@
 /* VIDEO */
 .header__video {
 	position: absolute;
-	min-width: 100%;
+	min-width: 100vw;
 	min-height: 100%;
 	right: 0;
 	bottom: 0;

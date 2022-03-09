@@ -1,5 +1,5 @@
 const urlHash = () => {
-    window.addEventListener("hashchange", function() {
+    window.addEventListener("hashchange", () => {
         history.replaceState({}, null, window.location.hash.replace("#", "/"));
   });
 }

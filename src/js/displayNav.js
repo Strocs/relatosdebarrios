@@ -1,20 +1,16 @@
+import { navMenu, navList, navBtn, navBtnDisplay } from './'
+
 const displayNav = () => {
-    const btn = document.querySelector('.nav__toggle-btn')
-    const btnDisplay = window.getComputedStyle(btn).display
-    const nav = document.querySelector('.nav__menu')
-    const menu = document.querySelectorAll('.nav__menu-section')
 
-    btn.addEventListener('click', () => {
+    navBtn.addEventListener('click', () => {
 
-        nav.classList.contains('setHeight')
-        ?   nav.classList.remove('setHeight')
-        :   nav.classList.add('setHeight')
+        navMenu.classList.toggle('setHeight')
 
     })
 
-    btnDisplay === 'none'
+    navBtnDisplay === 'none'
     ?   null   
-    :   menu.forEach(list => list.addEventListener('click', () => {
+    :   navList.forEach(list => list.addEventListener('click', () => {
                 nav.classList.remove('setHeight')
             })
         )

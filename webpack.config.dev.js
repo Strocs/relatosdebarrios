@@ -39,9 +39,10 @@ module.exports = {
         },
         {
             test: /\.css$/i,
-            use: [MiniCssExtractPlugin.loader, 
-            'css-loader',
-        ],
+            use: [
+                MiniCssExtractPlugin.loader, 
+                'css-loader', 
+            ],
         },
         {
             test: /\.(png|jpg|gif|svg|ico)$/,
@@ -98,6 +99,15 @@ module.exports = {
             patterns: [
             {
                 from: path.resolve(__dirname, "src", "assets", "videos"),
+                to: "assets"
+            }
+            ]
+        }),
+
+        new CopyPlugin({
+            patterns: [
+            {
+                from: path.resolve(__dirname, "src", "assets", "images"),
                 to: "assets"
             }
             ]

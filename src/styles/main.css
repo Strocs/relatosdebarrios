@@ -4,6 +4,7 @@
     background-color: var(--blue);
     background-position: top;
     background-repeat: no-repeat;
+    width: 100vw;
     /* height: 190rem; */
     /* margin-bottom: 2500px; */
 }
