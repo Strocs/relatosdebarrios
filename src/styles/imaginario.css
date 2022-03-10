@@ -55,8 +55,17 @@
 }
 
 .imaginario__3dbox {
-    max-width: 67rem;
     background-color: var(--azul);
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    max-width: 67rem;
+    width: 100%;
+    min-width: 37rem;
+    min-height: 20rem;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 500ms ease;
 }
 
 

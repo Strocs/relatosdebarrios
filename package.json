@@ -1,7 +1,7 @@
 {
-  "name": "web-frijol-magico",
+  "name": "relatos-de-barrios",
   "version": "1.0.0",
-  "description": "Desarrollo de la Web de Frijol Mágico con JS Vanilla y NPM",
+  "description": "Website Relatos de Barrios",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

@@ -4,7 +4,7 @@ import Splide from "@splidejs/splide"
 
 const createGallery = ([category, subCategory]) => {
 	const template = `
-        <div class="splide">
+        <div id="image-slider" class="splide">
             <div class="splide__track">
                 <ul class="splide__list">
                     ${createGalleryList(category, subCategory).replaceAll('', "")}
@@ -16,7 +16,10 @@ const createGallery = ([category, subCategory]) => {
 	div.innerHTML = template
 	galleryContainer.append(div.firstElementChild)
 
-	new Splide(".splide").mount()
+	new Splide("#image-slider", {
+		width : '100vw',
+		height: '100vh',
+  	}).mount()
 
 	return div
 }

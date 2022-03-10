@@ -1,3 +1,6 @@
+
+
+
 /* ---EL PROYECTO--- */
 .main__proyecto-wrapper {
 	display: flex;
@@ -9,14 +12,22 @@
 /* ---EQUIPO--- */
 .main__proyecto-equipo {
 	display: flex;
+	flex-direction: column;
 	height: auto;
 	width: 56rem;
+	gap: 2rem;
+
 }
 
 .equipo__wrapper,
 .colab__wrapper {
-	flex-grow: 1;
-	transition: flex-grow 500ms ease;
+	transition: height 500ms ease-in-out;
+	height: 100%;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .equipo__wrapper {
@@ -28,11 +39,91 @@
 }
 
 /* HOVER */
-.equipo__wrapper:hover,
-.colab__wrapper:hover {
-	flex-grow: 4;
-	transition: flex-grow 500ms ease-in;
+
+@keyframes opacity {
+	0%   {opacity: 0;}
+	50%  {opacity: 0;}
+	100% {opacity: 100;}
+  }
+
+.equipo__wrapper:hover .proyecto__equipo-list,
+.colab__wrapper:hover .proyecto__colab-list {
+	visibility: visible;
+	height: 380px;
+	margin: 2rem;
+	transition: height 500ms ease-in-out,
+				margin 500ms ease-in-out;
 }
+
+.equipo__wrapper:hover .equipo,
+.colab__wrapper:hover .colab {
+	animation: opacity 1s forwards;
+}
+
+/* .equipo__wrapper:hover,
+.colab__wrapper:hover {
+	transition: height 500ms ease-in-out;
+} */
+
+.equipo__wrapper h2,
+.colab__wrapper h2 {
+	color: var(--pastel);
+	font-size: 5rem;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	cursor: default;
+}
+
+.proyecto__equipo,
+.proyecto__colab {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.proyecto__equipo-list,
+.proyecto__colab-list {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	visibility: hidden;
+	height: 0px;
+	max-width: 500px;
+	margin: 0;
+	transition: height 500ms ease-in-out,
+				margin 500ms ease-in-out;
+}
+
+.equipo,
+.colab {
+	opacity: 0;
+	height: auto;
+	width: 100%;
+	max-width: calc((50rem - 2rem*2)/3);
+	background-color: var(--pastel);
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+}
+
+.equipo p,
+.colab p {
+	display: inline-block;
+	color: var(--azul);
+	font-size: 1.6rem;
+	margin: 0;
+	padding: 0;
+	cursor: default;
+}
+
+.equipo div,
+.colab div {
+	overflow: hidden;
+}
+
+
 
 /* ---DESCRIPCION--- */
 .main__proyecto-description {
@@ -102,7 +193,6 @@
 	.main__proyecto-description {
 		min-height: 50rem;
 		width: 100%;
-		/* align-items: center; */
 		gap: 2rem;
 	}
 
@@ -113,6 +203,11 @@
 	.proyecto__content {
 		align-self: center;
 		max-width: 60rem;
+	}
+	
+	.proyecto__equipo-list,
+	.proyecto__colab-list {
+		justify-content: center;
 	}
 }
 
@@ -139,5 +234,20 @@
 	.main__proyecto-equipo {
 		height: 50rem;
 		flex-direction: column;
+	}
+
+	.equipo__wrapper h2,
+	.colab__wrapper h2 {
+		font-size: 3rem;
+	}
+	
+	.equipo p,
+	.colab p {
+		font-size: 1.2rem;
+	}
+
+	.equipo,
+	.colab {
+		min-width: 100%;
 	}
 }

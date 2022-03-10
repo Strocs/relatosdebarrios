@@ -17,6 +17,7 @@ module.exports = {
 
     mode: 'development',
     devtool: "source-map",
+    target: 'web',
     resolve: { 
         extensions: ['.js'],
         alias: {
@@ -42,7 +43,7 @@ module.exports = {
             use: [
                 MiniCssExtractPlugin.loader, 
                 'css-loader', 
-            ],
+            ]
         },
         {
             test: /\.(png|jpg|gif|svg|ico)$/,
@@ -125,11 +126,11 @@ module.exports = {
           }),
 
     ],
-
     devServer: {
         contentBase: path.join(__dirname, 'docs'),
         compress: true,
         historyApiFallback: true,
         port: 8080,
     },
+
 }
