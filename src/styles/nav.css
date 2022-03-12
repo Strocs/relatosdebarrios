@@ -43,7 +43,8 @@
 }
 
 .nav__menu-section a {
-    color: var(--pastel);
+    /* color: var(--pastel); */
+	color: white;
     text-decoration: none;
     transition: text-decoration 300ms ease;
 }

@@ -2,14 +2,14 @@
 .header {
 	position: relative;
 	overflow: hidden;
-	height: 145vmin;
+	height: 160vmin;
+	width: 100vw;
 }
 
 /* VIDEO */
 .header__video {
 	position: absolute;
 	min-width: 100vw;
-	min-height: 100%;
 	right: 0;
 	bottom: 0;
 	left: 50%;
@@ -33,7 +33,7 @@
 
 .header__title-container {
 	max-width: 1500px;
-	margin: 20vh auto 0;
+	margin: 30vh auto 0;
 	padding-right: 5rem;
 }
 
@@ -92,6 +92,9 @@
 	/* MAIN CONTAINER */
 	.header {
 		height: 120vmax;
+	}
+	.header__video {
+		min-height: 100%;
 	}
 
 	/* BOTTOM IMG */

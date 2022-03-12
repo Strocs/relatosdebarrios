@@ -34,6 +34,7 @@
     margin-top: 8rem;
     gap: 3rem;
     min-height: 20rem;
+    height: 30rem;
 }
 
 .imaginario__box {
@@ -50,7 +51,6 @@
     justify-content: space-between;
     gap: 3rem;
     margin-top: 5rem;
-    height: 30rem;
     min-height: 20rem;
 }
 
@@ -68,7 +68,15 @@
     transition: transform 500ms ease;
 }
 
+.imaginario__3dbox:hover {
+    transform: scale(1.1);
+    transition: transform 500ms ease;
+}
 
+.imaginario__3dbox:hover > .box-fondo {
+    transform: scale(1.4);
+    transition: transform 2000ms ease;
+}
 /* TABLETS */
 @media only screen and (max-width: 1194px) {
     .imaginario__imgTransition img {
@@ -85,6 +93,7 @@
     .imaginario__fotos {
         flex-direction: column;
         align-items: center;
+        height: auto;
     }
 
     /* CAJAS 3D */
@@ -92,7 +101,6 @@
         flex-direction: column;
         align-items: center;
         margin-top: 10rem;
-        height: auto;
     }
 
     .imaginario__3dbox {

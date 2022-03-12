@@ -1,3 +1,6 @@
+.main__descubre {
+    position: relative;
+}
 
 .descubre__title {
     color: var(--pastel);
