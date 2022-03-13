@@ -20,13 +20,16 @@
 .sticker-estampilla {
     transform: rotate(-15deg);
     left: 5vw;
-    width: 20vw;
+    width: 20vmax;
 }
-@media only screen and (max-width: 1366px) {
-    .sticker-estampilla {
-        left: 0vw;
-    }
+
+.sticker-fotos {
+    transform: rotate(15deg);
+    right: -10vw;
+    top: -4vmax;
+    width: 20vmax;
 }
+
 
 .sticker-container {
     display: flex;
@@ -53,11 +56,63 @@
 .sticker-banderines {
     width: 100vw;
     position: absolute;
-    top: -18rem;
-    animation: balancing .5s infinite;
-    animation-direction: alternate-reverse;
+    top: -10rem;
+    /* animation: balancing .5s infinite; */
+    /* animation-direction: alternate-reverse; */
 }
 
+@media only screen and (max-width: 1366px) {
+    .sticker-estampilla {
+        left: 0vw;
+    }
+    .sticker-fotos {
+        top: -2vmax;
+        right: -5vw;
+    }
+    
+}
+
+@media only screen and (max-width: 1194px) {
+    .sticker-estampilla {
+        left: 0vw;
+        top: 5rem;
+    }
+
+    .sticker-container {
+        display: none;
+    }
+    .sticker-fotos {
+        top: 0vmax;
+    }
+
+}
+
+@media only screen and (max-width: 412px) {
+    .sticker:hover {
+      transform: none;  
+    }
+
+    .sticker-calle {
+        width: 15rem;
+        right: 2vw;
+        top: -2rem;
+    }
+
+    .sticker-estampilla {
+        
+    }
+
+
+
+    .sticker-refri {
+
+    }
+
+    .sticker-fotos {
+        top: 2vw;
+    }
+
+}
 
 
 

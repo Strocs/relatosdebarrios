@@ -1,5 +1,7 @@
 /* CONTENEDOR DEL TITULO */
-
+.main__domestico {
+	position: relative;
+}
 .domestico__title {
 	color: var(--pastel);
 	max-width: 100rem;
@@ -38,6 +40,10 @@
 
 .domestico__box {
 	background-color: var(--pastel);
+}
+
+.domestico__levan h2 {
+	color: var(--azul);
 }
 
 /* TABLETS */

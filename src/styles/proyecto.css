@@ -21,21 +21,28 @@
 
 .equipo__wrapper,
 .colab__wrapper {
-	transition: height 500ms ease-in-out;
+	/* transition: height 500ms ease-in-out; */
 	height: 100%;
 	position: relative;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	padding: 0 0 2rem;
 }
 
 .equipo__wrapper {
 	background-color: var(--azul);
+	background-image: url(../assets/equipo.jpg);
+	background-position: center;
+	background-size: cover;	
 }
 
 .colab__wrapper {
 	background-color: var(--amarillo);
+	background-image: url(../assets/colab.jpg);
+	background-position: center;
+	background-size: cover;	
 }
 
 /* HOVER */
@@ -50,11 +57,11 @@
 .colab__wrapper:hover .proyecto__colab-list {
 	visibility: visible;
 	height: 380px;
-	margin: 2rem;
-	transition: height 500ms ease-in-out,
-				margin 500ms ease-in-out;
+	transition: height 800ms ease-in-out;
 }
-
+.colab__wrapper:hover .proyecto__colab-list {
+	height: 280px;
+}
 .equipo__wrapper:hover .equipo,
 .colab__wrapper:hover .colab {
 	animation: opacity 1s forwards;
@@ -65,13 +72,15 @@
 	transition: height 500ms ease-in-out;
 } */
 
+
 .equipo__wrapper h2,
 .colab__wrapper h2 {
-	color: var(--pastel);
-	font-size: 5rem;
+	/* color: var(--pastel); */
+	color: white;
+	font-size: 6rem;
 	display: inline-block;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 1rem;
 	cursor: default;
 }
 
@@ -87,13 +96,12 @@
 .proyecto__colab-list {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 2rem;
+	gap: 1rem;
 	visibility: hidden;
 	height: 0px;
 	max-width: 500px;
 	margin: 0;
-	transition: height 500ms ease-in-out,
-				margin 500ms ease-in-out;
+	transition: height 800ms ease-in-out;
 }
 
 .equipo,
@@ -101,29 +109,57 @@
 	opacity: 0;
 	height: auto;
 	width: 100%;
+	max-height: 12rem;
 	max-width: calc((50rem - 2rem*2)/3);
 	background-color: var(--pastel);
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+
+	background-position: center;
+	background-size: cover;	
 }
 
 .equipo p,
 .colab p {
 	display: inline-block;
-	color: var(--azul);
+	color: white;
 	font-size: 1.6rem;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 0 1rem;
 	cursor: default;
+	text-align: end;
+	background-color: var(--azul);
 }
 
-.equipo div,
-.colab div {
-	overflow: hidden;
+.ale {
+	background-image: url(../assets/equipo/ale.jpg);
+}
+.javi {
+	background-image: url(../assets/equipo/javier.jpg);
+}
+.cami {
+	background-image: url(../assets/equipo/cami.jpg);
+}
+.caro {
+	background-image: url(../assets/equipo/caro.jpg);
+}
+.rocio {
+	background-image: url(../assets/equipo/rocio.jpg);
+}
+.xime {
+	background-image: url(../assets/equipo/xime.jpg);
+}
+.dani {
+	background-image: url(../assets/equipo/dani.jpg);
 }
 
-
+.vincent {
+	background-image: url(../assets/equipo/vincent.jpg);
+}
+.ignacio {
+	background-image: url(../assets/equipo/ignacio.jpg);
+}
 
 /* ---DESCRIPCION--- */
 .main__proyecto-description {
