@@ -5,10 +5,13 @@
     background-repeat: no-repeat;
     overflow: hidden;
     background-size: cover;
-    /* box-shadow: inset 0 -20rem 10rem -5rem var(--azul); */
     padding-bottom: 50rem;
+    position: relative;
 }
 
+.main__imaginario-wrapper {
+    position: relative;
+}
 
 .imaginario__imgTransition img {
     background-color: var(--azul);
@@ -31,9 +34,6 @@
 }
 
 /* CONTENEDOR DE LAS CAJAS */
-.imaginario__content {
-    /* padding-bottom: 50rem; */
-}
 
 .imaginario__fotos {
     display: flex;
@@ -96,11 +96,6 @@
         background-color: var(--azul);
         width: 200vw;
         margin-bottom: -12rem;
-    }
-
-    .imaginario__title {
-        /* max-width: 80rem;
-		min-width: 10rem; */
     }
 
     .imaginario__fotos {

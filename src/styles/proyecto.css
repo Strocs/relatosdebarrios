@@ -29,6 +29,7 @@
 	justify-content: center;
 	align-items: center;
 	padding: 0 0 2rem;
+	box-shadow: 0 2rem 3rem -1rem var(--azul);
 }
 
 .equipo__wrapper {
@@ -110,7 +111,7 @@
 	height: auto;
 	width: 100%;
 	max-height: 12rem;
-	max-width: calc((50rem - 2rem*2)/3);
+	max-width: calc((100% - 2rem*2)/3);
 	background-color: var(--pastel);
 	display: flex;
 	flex-direction: column;
@@ -280,10 +281,5 @@
 	.equipo p,
 	.colab p {
 		font-size: 1.2rem;
-	}
-
-	.equipo,
-	.colab {
-		min-width: 100%;
 	}
 }

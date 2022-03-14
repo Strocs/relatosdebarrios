@@ -4,11 +4,6 @@
     transition: transform 500ms ease;
 }
 
-.sticker:hover {
-    transform: scale(1.4);
-    transition: transform 500ms ease;
-}
-
 .sticker-calle {
     width: 40rem;
     top: -14rem;
@@ -23,29 +18,28 @@
     width: 20vmax;
 }
 
-.sticker-fotos {
-    transform: rotate(15deg);
-    right: -10vw;
-    top: -4vmax;
-    width: 20vmax;
+.sticker-estampilla:hover {
+    transform: scale(1.5);
+    transition: transform 500ms ease;
 }
 
+.sticker-bici {
+    width: 10vmax;
+    right: 5vmax;
+    top: 16vmax;
+}
+
+.sticker-calle:hover,
+.sticker-bici:hover {
+    transform: scale(1.3);
+    transition: transform 500ms ease;
+}
 
 .sticker-container {
     display: flex;
     justify-content: center;
     gap: 8rem;
     padding-bottom: 10rem;
-}
-
-.sticker-refri {
-    width: auto;
-    height: 10vw;
-    transition: transform 500ms ease;
-}
-.sticker-refri:hover {
-    transform: scale(1.4);
-    transition: transform 500ms ease;
 }
 
 @keyframes balancing {
@@ -66,8 +60,10 @@
         left: 0vw;
     }
     .sticker-fotos {
-        top: -2vmax;
         right: -5vw;
+    }
+    .sticker-bici {
+        left: 6vmax;
     }
     
 }
@@ -81,8 +77,15 @@
     .sticker-container {
         display: none;
     }
-    .sticker-fotos {
-        top: 0vmax;
+
+    .sticker-bici {
+        top: 35vmax;
+        left: 8vmax;
+    }
+
+    .sticker-banderines {
+        top: 0rem;
+        width: 150%;
     }
 
 }
@@ -98,18 +101,13 @@
         top: -2rem;
     }
 
-    .sticker-estampilla {
-        
+    .sticker-bici {
+        top: 20vmax;
+        left: 7vmax;
     }
 
-
-
-    .sticker-refri {
-
-    }
-
-    .sticker-fotos {
-        top: 2vw;
+    .sticker-banderines {
+        top: 5rem;
     }
 
 }
