@@ -11,7 +11,7 @@ const displayNav = () => {
     navBtnDisplay === 'none'
     ?   null   
     :   navList.forEach(list => list.addEventListener('click', () => {
-                nav.classList.remove('setHeight')
+                navMenu.classList.remove('setHeight')
             })
         )
 }
